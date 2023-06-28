@@ -8,7 +8,7 @@ using Toybox.Time.Gregorian;
 
 module BinaryClock {
   var frame = 0;
-  var animOffset as Array<Number> = [1, 3, 0, 2, 5, 4, 3, 2, 0, 3, 5];
+  var animOffset as Array<Number> = [1, 3, 0, 2, 5, 1, 4, 3, 2, 0, 3, 5];
   var animRight as Array<Number> = [4, 5, 6, 0, 6, 5];
   var animLeft as Array<Number> = [1, 2, 3, 0, 3, 2];
 
@@ -45,7 +45,7 @@ module BinaryClock {
         ],
       ]);
     }
-    dc.setClip(0, 0, 208, 208);
+    dc.clearClip();
   }
 
   function drawDigitLowPower(
@@ -106,12 +106,12 @@ module BinaryClock {
     }
     if (lowPower) {
       drawDigitLowPower(dc, COL_X[0], 4, date.hour % 13);
-      drawDigitLowPower(dc, COL_X[2], 3, date.min / 10);
+      drawDigitLowPower(dc, COL_X[2], 4, date.min / 10);
       drawDigitLowPower(dc, COL_X[3], 4, date.min % 10);
     } else {
       drawDigit(dc, COL_X[0], 0, 4, date.hour % 12);
-      drawDigit(dc, COL_X[2], 4, 3, date.min / 10);
-      drawDigit(dc, COL_X[3], 7, 4, date.min % 10);
+      drawDigit(dc, COL_X[2], 4, 4, date.min / 10);
+      drawDigit(dc, COL_X[3], 8, 4, date.min % 10);
       frame++;
     }
   }

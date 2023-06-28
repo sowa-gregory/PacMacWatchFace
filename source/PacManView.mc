@@ -31,7 +31,6 @@ class PacManView extends WatchUi.WatchFace {
     // animTimer.start(method(:timerCallback), 100, true);
   }
 
-  var px = 0;
   function onUpdate(dc as Dc) as Void {
     dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
 
@@ -47,7 +46,7 @@ class PacManView extends WatchUi.WatchFace {
     dc.drawCircle(104, 104, 68);
 
     dc.setPenWidth(1);
-    px++;
+    
     // drawWatchInfo(dc);
   }
 
