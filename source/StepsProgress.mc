@@ -11,14 +11,20 @@ module StepsProgress {
 
   var emptyGhost as Array<BitmapResource>?;
   var colorGhost as Array<BitmapResource>?;
-  var ghostX as Array<Number> = [119, 165, 180, 162, 119, 64, 22, 4, 20, 64];
-  var ghostY as Array<Number> = [6, 38, 90, 141, 173, 173, 141, 90, 38, 6];
-  var emptyGhostImage as Array<Number> = [0, 0, 1, 2, 2, 5, 5, 4, 3, 3];
-  var colorGhostImage as Array<Number> = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5];
+  var ghostX as Array<Number>?;
+  var ghostY as Array<Number>?;
+  var emptyGhostImage as Array<Number>?;
+  var colorGhostImage as Array<Number>?;
   var ghostWidth;
   var ghostHeight;
 
   function loadRes() {
+    ghostX = Application.loadResource(Rez.JsonData.GhostX);
+    ghostY = Application.loadResource(Rez.JsonData.GhostY);
+    emptyGhostImage = Application.loadResource(Rez.JsonData.EmptyGhostImage);
+    colorGhostImage = Application.loadResource(Rez.JsonData.ColorGhostImage);
+    
+    
     emptyGhost = new Array<BitmapResource>[6];
     emptyGhost[0] = Application.loadResource(Rez.Drawables.GhostEmptyRightTop);
     emptyGhost[1] = Application.loadResource(Rez.Drawables.GhostEmptyRight);

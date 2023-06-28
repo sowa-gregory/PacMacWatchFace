@@ -1,0 +1,6 @@
+<resources>
+   <jsonData id="GhostX">[119, 165, 180, 162, 119, 64, 22, 4, 20, 64]</jsonData>
+   <jsonData id="GhostY">[6, 38, 90, 141, 173, 173, 141, 90, 38, 6]</jsonData>
+   <jsonData id="EmptyGhostImage">[0, 0, 1, 2, 2, 5, 5, 4, 3, 3]</jsonData>
+   <jsonData id="ColorGhostImage">[0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5]</jsonData>
+</resources>
