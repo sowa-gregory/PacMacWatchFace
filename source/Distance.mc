@@ -6,12 +6,13 @@ import Toybox.ActivityMonitor;
 import Toybox.Activity;
 import Toybox.Weather;
 import Toybox.Application;
+import Toybox.WatchUi;
 
 module Distance {
   var distBmp;
 
   function loadRes() {
-    distBmp = Application.loadResource(Rez.Drawables.Distance);
+    distBmp = WatchUi.loadResource(Rez.Drawables.Distance);
   }
 
   function draw(dc as Dc) {

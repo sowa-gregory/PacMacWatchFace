@@ -6,12 +6,13 @@ import Toybox.ActivityMonitor;
 import Toybox.Activity;
 import Toybox.Weather;
 import Toybox.Application;
+import Toybox.WatchUi;
 
 module Calories {
   var calBmp;
  
   function loadRes() {
-    calBmp = Application.loadResource(Rez.Drawables.Calories);
+    calBmp = WatchUi.loadResource(Rez.Drawables.Calories);
   }
 
   function draw(dc as Dc) {

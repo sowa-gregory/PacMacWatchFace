@@ -5,6 +5,7 @@ import Toybox.Math;
 import Toybox.ActivityMonitor;
 import Toybox.Activity;
 import Toybox.Weather;
+import Toybox.WatchUi;
 import Toybox.Application;
 
 module Weather {
@@ -12,8 +13,8 @@ module Weather {
   var temperatureBmp;
 
   function loadRes() {
-    rainBmp = Application.loadResource(Rez.Drawables.Rain);
-    temperatureBmp = Application.loadResource(Rez.Drawables.Temp);
+    rainBmp = WatchUi.loadResource(Rez.Drawables.Rain);
+    temperatureBmp = WatchUi.loadResource(Rez.Drawables.Temp);
   }
 
   function draw(dc as Dc) {

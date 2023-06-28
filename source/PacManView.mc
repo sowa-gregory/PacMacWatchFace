@@ -18,6 +18,7 @@ class PacManView extends WatchUi.WatchFace {
     Weather.loadRes();
     Calories.loadRes();
     Distance.loadRes();
+    StepsProgress.loadRes();
   }
 
   function timerCallback() as Void {

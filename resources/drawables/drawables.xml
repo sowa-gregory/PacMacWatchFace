@@ -4,4 +4,16 @@
     <bitmap id="Temp" filename="temperature.png" dithering="none"/>
     <bitmap id="Calories" filename="calories.png" dithering="none"/>
     <bitmap id="Distance" filename="distance.png" dithering="none"/>
+    <bitmap id="GhostEmptyRightTop" filename="ghost-empty-right-top.png" dithering="none"/>
+    <bitmap id="GhostEmptyRight" filename="ghost-empty-right.png" dithering="none"/>
+    <bitmap id="GhostEmptyRightBottom" filename="ghost-empty-right-bottom.png" dithering="none"/>
+    <bitmap id="GhostEmptyLeftTop" filename="ghost-empty-left-top.png" dithering="none"/>
+    <bitmap id="GhostEmptyLeft" filename="ghost-empty-left.png" dithering="none"/>
+    <bitmap id="GhostEmptyLeftBottom" filename="ghost-empty-left-bottom.png" dithering="none"/>
+    <bitmap id="GhostRed" filename="ghost-red.png" dithering="none"/>
+    <bitmap id="GhostYellow" filename="ghost-yellow.png" dithering="none"/>
+    <bitmap id="GhostPink" filename="ghost-pink.png" dithering="none"/>
+    <bitmap id="GhostCyan" filename="ghost-cyan.png" dithering="none"/>
+    <bitmap id="GhostBlue" filename="ghost-blue.png" dithering="none"/>
+    <bitmap id="GhostGreen" filename="ghost-green.png" dithering="none"/>
 </drawables>

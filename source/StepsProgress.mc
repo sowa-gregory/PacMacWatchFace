@@ -3,131 +3,64 @@ import Toybox.Lang;
 import Toybox.System;
 import Toybox.Math;
 import Toybox.ActivityMonitor;
+import Toybox.Application;
+import Toybox.WatchUi;
 
 module StepsProgress {
-  const GHOST_SIZE = 24;
-  const START_ANGLE = 18;
-  const STEP_ANGE = 36;
+  
   const GHOSTS = 10;
-  const RADIUS = 88;
-  const SCREEN_SIZE = 208;
-  const SCREEN_SIZE_HALF = 104;
+  
+  var emptyGhost as Array<BitmapResource>?;
+  var colorGhost as Array<BitmapResource>?;
+  var ghostX as Array<Number> = [119, 165, 180, 162, 119, 64, 22, 4, 20, 64];
+  var ghostY as Array<Number> = [6, 38, 90, 141, 173, 173, 141, 90, 38, 6];
+  var emptyGhostImage as Array<Number> = [0, 0, 1, 2, 2, 5, 5, 4, 3, 3];
+  var colorGhostImage as Array<Number> = [-1, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5];
+  var ghostWidth;
+  var ghostHeight;
 
-  function drawEmptyGhost(
-    dc as Dc,
-    x as Number,
-    y as Number,
-    s as Number
-  ) as Void {
-    dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-    dc.setPenWidth(2);
-    y -= s * 0.1;
-    dc.setClip(x - s / 2, y - s / 2, s, s / 2);
-    dc.drawCircle(x, y, s / 2 - 1);
-    dc.setClip(0, 0, 208, 208);
-    dc.drawLine(x - s / 2, y, x - s / 2, y + s * 0.7);
-    dc.drawLine(x + s / 2, y - 1, x + s / 2, y + s * 0.7);
+  function loadRes() {
+    emptyGhost = new Array<BitmapResource>[6];
+    emptyGhost[0] = Application.loadResource(Rez.Drawables.GhostEmptyRightTop);
+    emptyGhost[1] = Application.loadResource(Rez.Drawables.GhostEmptyRight);
+    emptyGhost[2] = Application.loadResource(
+      Rez.Drawables.GhostEmptyRightBottom
+    );
+    emptyGhost[3] = Application.loadResource(Rez.Drawables.GhostEmptyLeftTop);
+    emptyGhost[4] = Application.loadResource(Rez.Drawables.GhostEmptyLeft);
+    emptyGhost[5] = Application.loadResource(
+      Rez.Drawables.GhostEmptyLeftBottom
+    );
+    ghostWidth = emptyGhost[0].getWidth();
+    ghostHeight = emptyGhost[0].getHeight();
 
-    var step = s / 6.0;
-    var xpos = x - s / 2;
-
-    dc.drawLine(xpos, y + s * 0.7, xpos + step, y + s * 0.5);
-    dc.drawLine(xpos + step, y + s * 0.5, xpos + 2 * step, y + s * 0.7);
-    xpos += 2 * step;
-    dc.drawLine(xpos, y + s * 0.7, xpos + step, y + s * 0.5);
-    dc.drawLine(xpos + step, y + s * 0.5, xpos + 2 * step, y + s * 0.7);
-    xpos += 2 * step;
-    dc.drawLine(xpos, y + s * 0.7, xpos + step, y + s * 0.5);
-    dc.drawLine(xpos + step, y + s * 0.5, x + s / 2, y + s * 0.7);
-
-    dc.drawEllipse(x - s * 0.17, y, s / 8, s / 6);
-    dc.drawEllipse(x + s * 0.17, y, s / 8, s / 6);
-    dc.setPenWidth(1);
+    colorGhost = new Array<BitmapResource>[6];
+    colorGhost[0] = Application.loadResource(Rez.Drawables.GhostPink);
+    colorGhost[1] = Application.loadResource(Rez.Drawables.GhostRed);
+    colorGhost[2] = Application.loadResource(Rez.Drawables.GhostYellow);
+    colorGhost[3] = Application.loadResource(Rez.Drawables.GhostCyan);
+    colorGhost[4] = Application.loadResource(Rez.Drawables.GhostBlue);
+    colorGhost[5] = Application.loadResource(Rez.Drawables.GhostGreen);
   }
 
-  function drawGhost(
-    dc as Dc,
-    x as Number,
-    y as Number,
-    s as Number,
-    col as Graphics.ColorValue
-  ) as Void {
-    dc.setColor(col, Graphics.COLOR_BLACK);
-    y -= s * 0.1;
-    dc.fillCircle(x, y, s / 2 - 1);
-    dc.fillRectangle(x - s / 2, y, s, s * 0.7);
-    dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-    var step = s / 6.0;
-    var xpos = x - s / 2;
-    for (var i = 0; i < 3; i++) {
-      dc.fillPolygon([
-        [xpos, y + s * 0.7],
-        [xpos + step, y + s * 0.5],
-        [xpos + 2 * step, y + s * 0.7],
-      ]);
-      xpos += 2 * step;
-    }
-    dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-    dc.fillEllipse(x - s * 0.12, y, s / 7.5, s / 5);
-    dc.fillEllipse(x + s * 0.25, y, s / 7.5, s / 5);
-    dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-    var eyesize = s / 15.0;
-    if (eyesize < 2) {
-      eyesize = 2;
-    }
-    dc.fillEllipse(
-      x - s * 0.12 + eyesize / 3,
-      y + eyesize * 0.7,
-      eyesize,
-      eyesize
-    );
-    dc.fillEllipse(
-      x + s * 0.25 + eyesize / 3,
-      y + eyesize * 0.7,
-      eyesize,
-      eyesize
-    );
-  }
-
+  
   function draw(dc as Dc) as Void {
-    var PROGRESS_COLORS = [
-      Graphics.COLOR_WHITE,
-      Graphics.COLOR_PURPLE,
-      Graphics.COLOR_RED,
-      Graphics.COLOR_RED,
-      Graphics.COLOR_YELLOW,
-      Graphics.COLOR_YELLOW,
-      Graphics.COLOR_DK_BLUE,
-      Graphics.COLOR_DK_BLUE,
-      Graphics.COLOR_BLUE,
-      Graphics.COLOR_BLUE,
-      Graphics.COLOR_GREEN,
-    ];
-
     var steps = ActivityMonitor.getInfo().steps;
     var stepGoal = ActivityMonitor.getInfo().stepGoal;
     var progress = (steps * 100) / stepGoal;
-
-    System.print("steps percent:");
-    System.println(progress);
 
     var colIndex = progress / GHOSTS;
     if (colIndex > 10) {
       colIndex = 10;
     }
-    var col = PROGRESS_COLORS[colIndex];
-    var angle = START_ANGLE;
-    var stepAngle = STEP_ANGE;
+    var ghostImageCol = colorGhostImage[colIndex];
 
     for (var i = 0; i < GHOSTS; i++) {
-      var x = (104 + RADIUS * Math.sin((angle * Math.PI) / 180)).toNumber();
-      var y = (104 - RADIUS * Math.cos((angle * Math.PI) / 180)).toNumber();
       if (progress >= (i + 1) * GHOSTS) {
-        drawGhost(dc, x, y, GHOST_SIZE, col);
+        dc.drawBitmap(ghostX[i], ghostY[i], colorGhost[ghostImageCol]);
       } else {
-        drawEmptyGhost(dc, x, y, GHOST_SIZE - 2);
+        dc.drawBitmap(ghostX[i], ghostY[i], emptyGhost[emptyGhostImage[i]]);
       }
-      angle += stepAngle;
     }
   }
 }
