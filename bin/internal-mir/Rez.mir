@@ -1,0 +1,1194 @@
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var Rain as Symbol;
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 10; @position = 27; initialized = true; ]
+        var Temp as Symbol;
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 11; @position = 27; initialized = true; ]
+        var Calories as Symbol;
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 12; @position = 27; initialized = true; ]
+        var Distance as Symbol;
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 13; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 16; ]
+    module Fonts {
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 16; ]
+        <init> {
+        }
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 19; ]
+    module JsonData {
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 19; ]
+        <init> {
+        }
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 22; ]
+    module Layouts {
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 22; ]
+        <init> {
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 23; ]
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_bin_gen_006_B3869_00_source_Rez_mcgen_23_73_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 24 12 ]
+            [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_bin_gen_006_B3869_00_source_Rez_mcgen_23_73_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_bin_gen_006_B3869_00_source_Rez_mcgen_23_73_stop" ]
+            %rez_cmp_local_text_1473399581.1 = local;
+            %tmp.3 = getm $.Toybox.WatchUi;
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 6;
+            %tmp.7 = const :color;
+            %tmp.8 = getm $.Toybox.Graphics;
+            %tmp.9 = getv %tmp.8 :COLOR_WHITE;
+            %tmp.10 = dup %tmp.5;
+            %tmp.11 = aputv %tmp.10 %tmp.7 %tmp.9;
+            %tmp.13 = const :locX;
+            %tmp.14 = 208;
+            %tmp.15 = 0.5;
+            %tmp.16 = mul %tmp.14 %tmp.15;
+            %tmp.17 = dup %tmp.11;
+            %tmp.18 = aputv %tmp.17 %tmp.13 %tmp.16;
+            %tmp.20 = const :locY;
+            %tmp.21 = 25;
+            %tmp.22 = dup %tmp.18;
+            %tmp.23 = aputv %tmp.22 %tmp.20 %tmp.21;
+            %tmp.25 = const :text;
+            %tmp.26 = "Page Heading";
+            %tmp.27 = dup %tmp.23;
+            %tmp.28 = aputv %tmp.27 %tmp.25 %tmp.26;
+            %tmp.30 = const :justification;
+            %tmp.31 = getm $.Toybox.Graphics;
+            %tmp.32 = getv %tmp.31 :TEXT_JUSTIFY_CENTER;
+            %tmp.33 = dup %tmp.28;
+            %tmp.34 = aputv %tmp.33 %tmp.30 %tmp.32;
+            %tmp.36 = const :font;
+            %tmp.37 = getm $.Toybox.Graphics;
+            %tmp.38 = getv %tmp.37 :FONT_LARGE;
+            %tmp.39 = dup %tmp.34;
+            %tmp.40 = aputv %tmp.39 %tmp.36 %tmp.38;
+            %tmp.1 = newc %tmp.4 (%tmp.40);
+            lputv %rez_cmp_local_text_1473399581.1 %tmp.1;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 26 12 ]
+            %tmp.41 = newa Array<WatchUi.Drawable> 1;
+            %tmp.43 = lgetv %rez_cmp_local_text_1473399581.1;
+            %tmp.44 = dup %tmp.41;
+            %tmp.45 = aputv %tmp.44 0 %tmp.43;
+            ret %tmp.45;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_bin_gen_006_B3869_00_source_Rez_mcgen_23_73_stop:
+        }
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 30; ]
+    module Menus {
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 30; ]
+        <init> {
+        }
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 33; ]
+    module Strings {
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 33; ]
+        <init> {
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 34; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 37; ]
+    module Styles {
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 37; ]
+        <init> {
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 38; ]
+        module system_size__menu_header {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 38; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 39; @position = 18; ]
+            const width as Number = 208;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 40; @position = 18; ]
+            const height as Number = 65;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 43; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 43; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 44; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__hint_button_left_bottom.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 45; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 48; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 48; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 49; @position = 18; ]
+            const x as Number = 11;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 50; @position = 18; ]
+            const y as Number = 138;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 53; ]
+        module prompt_loc__body_no_title {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 53; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 54; @position = 18; ]
+            const x as Number = 21;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 55; @position = 18; ]
+            const y as Number = 21;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 58; ]
+        module system_icon_dark__about {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 58; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 59; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__about.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 60; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 61; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 62; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 65; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 65; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 66; @position = 18; ]
+            const x as Number = 178;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 67; @position = 18; ]
+            const y as Number = 137;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 70; ]
+        module confirmation_color_dark__body {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 70; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 72 18 ]
+                %tmp.46 = getm $.Toybox.Graphics;
+                %tmp.47 = getv %tmp.46 :COLOR_TRANSPARENT;
+                putv self :background %tmp.47;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 71; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 72; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 75; ]
+        module system_icon_light__question {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 75; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 76; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__question.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 77; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 80; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 80; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 81; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 84; ]
+        module prompt_font__title {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 84; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 85 18 ]
+                %tmp.48 = getm $.Toybox.Graphics;
+                %tmp.49 = getv %tmp.48 :TEXT_JUSTIFY_CENTER;
+                %tmp.50 = getm $.Toybox.Graphics;
+                %tmp.51 = getv %tmp.50 :TEXT_JUSTIFY_VCENTER;
+                %tmp.52 = bitor %tmp.49 %tmp.51;
+                putv self :justification %tmp.52;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 86 18 ]
+                %tmp.53 = getm $.Toybox.Graphics;
+                %tmp.54 = getv %tmp.53 :FONT_XTINY;
+                putv self :font %tmp.54;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 85; @position = 18; ]
+            const justification;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 86; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 89; ]
+        module system_icon_dark__discard {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 89; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 90; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__discard.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 91; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 92; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 93; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 96; ]
+        module system_size__menu_item {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 96; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 97; @position = 18; ]
+            const width as Number = 208;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 98; @position = 18; ]
+            const height as Number = 54;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 101; ]
+        module prompt_color_dark__title {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 101; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 103 18 ]
+                %tmp.55 = getm $.Toybox.Graphics;
+                %tmp.56 = getv %tmp.55 :COLOR_TRANSPARENT;
+                putv self :background %tmp.56;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 102; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 103; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 106; ]
+        module system_icon_destructive__cancel {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 106; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 107; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_destructive__cancel.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 108; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 111; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 111; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 112; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 113; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 116; ]
+        module system_color_dark__text {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 116; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 118 18 ]
+                %tmp.57 = getm $.Toybox.Graphics;
+                %tmp.58 = getv %tmp.57 :COLOR_TRANSPARENT;
+                putv self :background %tmp.58;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 117; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 118; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 121; ]
+        module system_icon_destructive__discard {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 121; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 122; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_destructive__discard.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 123; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 126; ]
+        module prompt_loc__title {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 126; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 127; @position = 18; ]
+            const x as Number = 21;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 128; @position = 18; ]
+            const y as Number = 15;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 131; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 131; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 132; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__hint_button_right_top.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 133; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 136; ]
+        module prompt_color_light__title {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 136; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 138 18 ]
+                %tmp.59 = getm $.Toybox.Graphics;
+                %tmp.60 = getv %tmp.59 :COLOR_TRANSPARENT;
+                putv self :background %tmp.60;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 137; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 138; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 141; ]
+        module prompt_size__title {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 141; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 142; @position = 18; ]
+            const width as Number = 166;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 143; @position = 18; ]
+            const height as Number = 38;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 146; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 146; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 147; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__hint_button_right_top.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 148; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 151; ]
+        module confirmation_font__body {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 151; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 152 18 ]
+                %tmp.61 = getm $.Toybox.Graphics;
+                %tmp.62 = getv %tmp.61 :TEXT_JUSTIFY_CENTER;
+                %tmp.63 = getm $.Toybox.Graphics;
+                %tmp.64 = getv %tmp.63 :TEXT_JUSTIFY_VCENTER;
+                %tmp.65 = bitor %tmp.62 %tmp.64;
+                putv self :justification %tmp.65;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 153 18 ]
+                %tmp.66 = getm $.Toybox.Graphics;
+                %tmp.67 = getv %tmp.66 :FONT_TINY;
+                putv self :font %tmp.67;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 152; @position = 18; ]
+            const justification;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 153; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 156; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 156; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 157; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__hint_button_left_middle.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 158; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 161; ]
+        module system_color_dark__background {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 161; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 162; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 163; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 166; ]
+        module system_icon_light__cancel {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 166; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 167; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__cancel.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 168; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 171; ]
+        module system_size__launch_icon {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 171; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 172; @position = 18; ]
+            const scaleX as Number = 35;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 173; @position = 18; ]
+            const scaleY as Number = 35;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 174; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 177; ]
+        module confirmation_input__confirm {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 177; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 178 18 ]
+                %tmp.68 = getm $.Toybox.WatchUi;
+                %tmp.69 = getv %tmp.68 :KEY_ENTER;
+                putv self :button %tmp.69;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 178; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 181; ]
+        module system_icon_light__about {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 181; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 182; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__about.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 183; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 186; ]
+        module system_size__toast_icon {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 186; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 187; @position = 18; ]
+            const scaleX as Number = 21;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 188; @position = 18; ]
+            const scaleY as Number = 21;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 189; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 192; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 192; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 193; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 194; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 197; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 197; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 198; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__hint_button_right_top.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 199; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 202; ]
+        module prompt_font__body_with_title {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 202; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 203 18 ]
+                %tmp.70 = getm $.Toybox.Graphics;
+                %tmp.71 = getv %tmp.70 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.71;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 204 18 ]
+                %tmp.72 = getm $.Toybox.Graphics;
+                %tmp.73 = getv %tmp.72 :FONT_TINY;
+                putv self :font %tmp.73;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 203; @position = 18; ]
+            const justification;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 204; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 207; ]
+        module confirmation_loc__body {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 207; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 208; @position = 18; ]
+            const x as Number = 42;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 209; @position = 18; ]
+            const y as Number = 42;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 212; ]
+        module prompt_color_dark__background {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 212; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 213; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 214; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 217; ]
+        module system_loc__hint_action_menu {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 217; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 218; @position = 18; ]
+            const x as Number = 175;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 219; @position = 18; ]
+            const y as Number = 33;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 222; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 222; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 223; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 224; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 227; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 227; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 228; @position = 18; ]
+            const x as Number = 10;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 229; @position = 18; ]
+            const y as Number = 139;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 230; @position = 18; ]
+            const horizontalJustification as String = "left";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 233; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 233; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 234; @position = 18; ]
+            const x as Number = 4;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 235; @position = 18; ]
+            const y as Number = 88;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 238; ]
+        module activity_color_dark__background {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 238; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 239; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 240; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 243; ]
+        module prompt_size__body_no_title {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 243; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 244; @position = 18; ]
+            const width as Number = 166;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 245; @position = 18; ]
+            const height as Number = 166;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 248; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 248; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 249; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__hint_button_left_bottom.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 250; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 253; ]
+        module system_size__menu_icon {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 253; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 254; @position = 18; ]
+            const scaleX as Number = 35;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 255; @position = 18; ]
+            const scaleY as Number = 35;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 256; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 259; ]
+        module system_icon_destructive__warning {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 259; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 260; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_destructive__warning.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 261; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 264; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 264; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 265; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__hint_button_left_top.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 266; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 269; ]
+        module prompt_color_light__background {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 269; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 270; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 271; @position = 18; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 274; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 274; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 275; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 278; ]
+        module system_icon_dark__cancel {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 278; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 279; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__cancel.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 280; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 281; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 282; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 285; ]
+        module confirmation_input__delete {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 285; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 286 18 ]
+                %tmp.74 = getm $.Toybox.WatchUi;
+                %tmp.75 = getv %tmp.74 :KEY_ENTER;
+                putv self :button %tmp.75;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 286; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 289; ]
+        module prompt_size__body_with_title {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 289; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 290; @position = 18; ]
+            const width as Number = 166;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 291; @position = 18; ]
+            const height as Number = 125;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 294; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 294; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 295; @position = 18; ]
+            const x as Number = 175;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 296; @position = 18; ]
+            const y as Number = 33;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 299; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 299; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 300; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__hint_button_left_top.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 301; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 304; ]
+        module system_color_light__text {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 304; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 306 18 ]
+                %tmp.76 = getm $.Toybox.Graphics;
+                %tmp.77 = getv %tmp.76 :COLOR_TRANSPARENT;
+                putv self :background %tmp.77;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 305; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 306; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 309; ]
+        module system_input__action_menu {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 309; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 310 18 ]
+                %tmp.78 = getm $.Toybox.WatchUi;
+                %tmp.79 = getv %tmp.78 :KEY_ENTER;
+                putv self :button %tmp.79;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 310; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 313; ]
+        module system_icon_light__save {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 313; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 314; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__save.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 315; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 318; ]
+        module system_icon_light__check {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 318; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 319; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__check.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 320; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 323; ]
+        module prompt_color_light__body {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 323; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 325 18 ]
+                %tmp.80 = getm $.Toybox.Graphics;
+                %tmp.81 = getv %tmp.80 :COLOR_TRANSPARENT;
+                putv self :background %tmp.81;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 324; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 325; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 328; ]
+        module system_loc__subwindow {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 328; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 329; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 332; ]
+        module confirmation_input__reject {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 332; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 333 18 ]
+                %tmp.82 = getm $.Toybox.WatchUi;
+                %tmp.83 = getv %tmp.82 :KEY_DOWN;
+                putv self :button %tmp.83;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 333; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 336; ]
+        module system_icon_light__warning {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 336; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 337; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__warning.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 338; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 341; ]
+        module system_icon_light__revert {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 341; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 342; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__revert.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 343; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 346; ]
+        module system_size__subwindow {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 346; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 347; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 350; ]
+        module confirmation_color_light__body {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 350; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 352 18 ]
+                %tmp.84 = getm $.Toybox.Graphics;
+                %tmp.85 = getv %tmp.84 :COLOR_TRANSPARENT;
+                putv self :background %tmp.85;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 351; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 352; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 355; ]
+        module activity_color_light__background {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 355; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 356; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 357; @position = 18; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 360; ]
+        module system_icon_dark__check {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 360; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 361; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__check.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 362; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 363; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 364; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 367; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 367; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 368; @position = 18; ]
+            const x as Number = 10;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 369; @position = 18; ]
+            const y as Number = 139;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 370; @position = 18; ]
+            const horizontalJustification as String = "left";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 373; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 373; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 374; @position = 18; ]
+            const x as Number = 169;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 375; @position = 18; ]
+            const y as Number = 42;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 378; ]
+        module system_size__screen {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 378; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 379; @position = 18; ]
+            const width as Number = 208;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 380; @position = 18; ]
+            const height as Number = 208;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 383; ]
+        module system_color_light__background {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 383; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 384; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 385; @position = 18; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 388; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 388; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 389; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__hint_button_left_middle.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 390; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 393; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 393; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 394; @position = 18; ]
+            const x as Number = 169;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 395; @position = 18; ]
+            const y as Number = 42;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 398; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 398; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 399; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 400; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 403; ]
+        module system_icon_dark__revert {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 403; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 404; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__revert.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 405; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 406; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 407; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 410; ]
+        module activity_color_dark__text {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 410; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 412 18 ]
+                %tmp.86 = getm $.Toybox.Graphics;
+                %tmp.87 = getv %tmp.86 :COLOR_TRANSPARENT;
+                putv self :background %tmp.87;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 411; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 412; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 415; ]
+        module confirmation_input__keep {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 415; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 416 18 ]
+                %tmp.88 = getm $.Toybox.WatchUi;
+                %tmp.89 = getv %tmp.88 :KEY_DOWN;
+                putv self :button %tmp.89;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 416; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 419; ]
+        module prompt_loc__body_with_title {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 419; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 420; @position = 18; ]
+            const x as Number = 21;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 421; @position = 18; ]
+            const y as Number = 63;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 424; ]
+        module system_icon_dark__question {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 424; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 425; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__question.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 426; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 427; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 428; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 431; ]
+        module system_icon_light__discard {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 431; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 432; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__discard.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 433; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 436; ]
+        module device_info {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 436; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 438 18 ]
+                %tmp.90 = getm $.Toybox.System;
+                %tmp.91 = getv %tmp.90 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.91;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 437; @position = 18; ]
+            const screenWidth as Number = 208;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 438; @position = 18; ]
+            const screenShape;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 439; @position = 18; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 440; @position = 18; ]
+            const screenHeight as Number = 208;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 441; @position = 18; ]
+            const hasTouchScreen as Boolean = true;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 444; ]
+        module system_icon_dark__search {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 444; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 445; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__search.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 446; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 447; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 448; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 451; ]
+        module activity_color_light__text {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 451; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 453 18 ]
+                %tmp.92 = getm $.Toybox.Graphics;
+                %tmp.93 = getv %tmp.92 :COLOR_TRANSPARENT;
+                putv self :background %tmp.93;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 452; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 453; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 456; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 456; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 457; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 458; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 461; ]
+        module system_icon_dark__save {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 461; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 462; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__save.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 463; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 464; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 465; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 468; ]
+        module prompt_font__body_no_title {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 468; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 469 18 ]
+                %tmp.94 = getm $.Toybox.Graphics;
+                %tmp.95 = getv %tmp.94 :TEXT_JUSTIFY_CENTER;
+                %tmp.96 = getm $.Toybox.Graphics;
+                %tmp.97 = getv %tmp.96 :TEXT_JUSTIFY_VCENTER;
+                %tmp.98 = bitor %tmp.95 %tmp.97;
+                putv self :justification %tmp.98;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 470 18 ]
+                %tmp.99 = getm $.Toybox.Graphics;
+                %tmp.100 = getv %tmp.99 :FONT_TINY;
+                putv self :font %tmp.100;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 469; @position = 18; ]
+            const justification;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 470; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 473; ]
+        module system_icon_light__search {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 473; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 474; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__search.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 475; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 478; ]
+        module prompt_size__title_icon {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 478; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 479; @position = 18; ]
+            const scaleX as Float = 0.1539;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 480; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 483; ]
+        module system_icon_dark__warning {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 483; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 484; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_dark__warning.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 485; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 486; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 487; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 490; ]
+        module prompt_loc__title_icon {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 490; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 491; @position = 18; ]
+            const x as Number = 104;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 492; @position = 18; ]
+            const y as Number = 31;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 493; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 494; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 497; ]
+        module prompt_color_dark__body {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 497; ]
+            <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen" 499 18 ]
+                %tmp.101 = getm $.Toybox.Graphics;
+                %tmp.102 = getv %tmp.101 :COLOR_TRANSPARENT;
+                putv self :background %tmp.102;
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 498; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 499; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 502; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 502; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 503; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 504; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 507; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 507; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 508; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_light__hint_button_right_top.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 509; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 512; ]
+        module confirmation_size__body {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 512; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 513; @position = 18; ]
+            const width as Number = 125;
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 514; @position = 18; ]
+            const height as Number = 125;
+        }
+        [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 517; ]
+        module system_icon_positive__check {
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 517; ]
+            <init> {
+            }
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 518; @position = 18; ]
+            const filename as String = "/Users/sowisz/Library/Application Support/Garmin/ConnectIQ/Devices/fr55/system_icon_positive__check.svg";
+            [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 519; @position = 18; ]
+            const dithering as String = "none";
+        }
+    }
+}
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/bin/gen/006-B3869-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}

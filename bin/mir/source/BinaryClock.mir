@@ -1,0 +1,695 @@
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 3; ]
+import Toybox.System;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 4; ]
+import Toybox.Math;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 5; ]
+import Toybox.ActivityMonitor;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 6; ]
+import Toybox.Time;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 7; ]
+using Toybox.Time.Gregorian;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 9; ]
+module BinaryClock {
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 9; ]
+    <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 11 6 ]
+        %tmp.1 = newa 11;
+        %tmp.2 = 1;
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = 3;
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = 0;
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = 2;
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        %tmp.14 = 5;
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 4 %tmp.14;
+        %tmp.17 = 4;
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 5 %tmp.17;
+        %tmp.20 = 3;
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 6 %tmp.20;
+        %tmp.23 = 2;
+        %tmp.24 = dup %tmp.22;
+        %tmp.25 = aputv %tmp.24 7 %tmp.23;
+        %tmp.26 = 0;
+        %tmp.27 = dup %tmp.25;
+        %tmp.28 = aputv %tmp.27 8 %tmp.26;
+        %tmp.29 = 3;
+        %tmp.30 = dup %tmp.28;
+        %tmp.31 = aputv %tmp.30 9 %tmp.29;
+        %tmp.32 = 5;
+        %tmp.33 = dup %tmp.31;
+        %tmp.34 = aputv %tmp.33 10 %tmp.32;
+        putv self :animOffset %tmp.34;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 12 6 ]
+        %tmp.35 = newa 6;
+        %tmp.36 = 4;
+        %tmp.37 = dup %tmp.35;
+        %tmp.38 = aputv %tmp.37 0 %tmp.36;
+        %tmp.39 = 5;
+        %tmp.40 = dup %tmp.38;
+        %tmp.41 = aputv %tmp.40 1 %tmp.39;
+        %tmp.42 = 6;
+        %tmp.43 = dup %tmp.41;
+        %tmp.44 = aputv %tmp.43 2 %tmp.42;
+        %tmp.45 = 0;
+        %tmp.46 = dup %tmp.44;
+        %tmp.47 = aputv %tmp.46 3 %tmp.45;
+        %tmp.48 = 6;
+        %tmp.49 = dup %tmp.47;
+        %tmp.50 = aputv %tmp.49 4 %tmp.48;
+        %tmp.51 = 5;
+        %tmp.52 = dup %tmp.50;
+        %tmp.53 = aputv %tmp.52 5 %tmp.51;
+        putv self :animRight %tmp.53;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 13 6 ]
+        %tmp.54 = newa 6;
+        %tmp.55 = 1;
+        %tmp.56 = dup %tmp.54;
+        %tmp.57 = aputv %tmp.56 0 %tmp.55;
+        %tmp.58 = 2;
+        %tmp.59 = dup %tmp.57;
+        %tmp.60 = aputv %tmp.59 1 %tmp.58;
+        %tmp.61 = 3;
+        %tmp.62 = dup %tmp.60;
+        %tmp.63 = aputv %tmp.62 2 %tmp.61;
+        %tmp.64 = 0;
+        %tmp.65 = dup %tmp.63;
+        %tmp.66 = aputv %tmp.65 3 %tmp.64;
+        %tmp.67 = 3;
+        %tmp.68 = dup %tmp.66;
+        %tmp.69 = aputv %tmp.68 4 %tmp.67;
+        %tmp.70 = 2;
+        %tmp.71 = dup %tmp.69;
+        %tmp.72 = aputv %tmp.71 5 %tmp.70;
+        putv self :animLeft %tmp.72;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 19 8 ]
+        %tmp.73 = newa 4;
+        %tmp.74 = 88;
+        %tmp.75 = dup %tmp.73;
+        %tmp.76 = aputv %tmp.75 0 %tmp.74;
+        %tmp.77 = 100;
+        %tmp.78 = dup %tmp.76;
+        %tmp.79 = aputv %tmp.78 1 %tmp.77;
+        %tmp.80 = 112;
+        %tmp.81 = dup %tmp.79;
+        %tmp.82 = aputv %tmp.81 2 %tmp.80;
+        %tmp.83 = 125;
+        %tmp.84 = dup %tmp.82;
+        %tmp.85 = aputv %tmp.84 3 %tmp.83;
+        putv self :COL_X %tmp.85;
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 10; @position = 6; ]
+    var frame = 0;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 11; @position = 6; ]
+    var animOffset as Array<Number>;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 12; @position = 6; ]
+    var animRight as Array<Number>;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 13; @position = 6; ]
+    var animLeft as Array<Number>;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 15; @position = 8; ]
+    const CLOCK_Y = 90;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 16; @position = 8; ]
+    const CLOCK_Y_OFFSET = 13;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 17; @position = 8; ]
+    const ANIM_PHASES = 6;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 18; @position = 8; ]
+    const PACMAN_SIZE = 5;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 19; @position = 8; ]
+    const COL_X;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 21; ]
+    function drawPacman(dc as Dc, x as Number, y as Number, radius as Number, frame as Number) {
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_27_4_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 28 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_27_4_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_27_4_stop" ]
+        %angles.1 = local;
+        %tmp.1 = newa 7;
+        %tmp.2 = 0;
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = 225;
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = 240;
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = 260;
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        %tmp.14 = 45;
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 4 %tmp.14;
+        %tmp.17 = 60;
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 5 %tmp.17;
+        %tmp.20 = 80;
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 6 %tmp.20;
+        lputv %angles.1 %tmp.22;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 30 4 ]
+        %tmp.23 = lgetv %dc;
+        %tmp.24 = getv function %tmp.23 :setColor;
+        %tmp.25 = getm $.Toybox.Graphics;
+        %tmp.26 = getv %tmp.25 :COLOR_YELLOW;
+        %tmp.27 = getm $.Toybox.Graphics;
+        %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 31 4 ]
+        %tmp.29 = lgetv %dc;
+        %tmp.30 = getv function %tmp.29 :fillCircle;
+        %tmp.32 = lgetv %x;
+        %tmp.34 = lgetv %y;
+        %tmp.36 = lgetv %radius;
+        invoke %tmp.29 %tmp.30(%tmp.32, %tmp.34, %tmp.36);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 32 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_27_4_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_27_4_stop" ]
+        %angle.2 = local;
+        %tmp.38 = lgetv %angles.1;
+        %tmp.40 = lgetv %frame;
+        %tmp.41 = 7;
+        %tmp.42 = mod %tmp.40 %tmp.41;
+        %tmp.43 = agetv %tmp.38 %tmp.42;
+        lputv %angle.2 %tmp.43;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 33 4 ]
+        %tmp.44 = lgetv %dc;
+        %tmp.45 = getv function %tmp.44 :setClip;
+        %tmp.47 = lgetv %x;
+        %tmp.49 = lgetv %radius;
+        %tmp.50 = sub %tmp.47 %tmp.49;
+        %tmp.52 = lgetv %y;
+        %tmp.54 = lgetv %radius;
+        %tmp.55 = sub %tmp.52 %tmp.54;
+        %tmp.57 = lgetv %radius;
+        %tmp.58 = 2;
+        %tmp.59 = mul %tmp.57 %tmp.58;
+        %tmp.60 = 1;
+        %tmp.61 = add %tmp.59 %tmp.60;
+        %tmp.63 = lgetv %radius;
+        %tmp.64 = 2;
+        %tmp.65 = mul %tmp.63 %tmp.64;
+        %tmp.66 = 1;
+        %tmp.67 = add %tmp.65 %tmp.66;
+        invoke %tmp.44 %tmp.45(%tmp.50, %tmp.55, %tmp.61, %tmp.67);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 34 4 ]
+        %tmp.68 = lgetv %dc;
+        %tmp.69 = getv function %tmp.68 :setColor;
+        %tmp.70 = getm $.Toybox.Graphics;
+        %tmp.71 = getv %tmp.70 :COLOR_BLACK;
+        %tmp.72 = getm $.Toybox.Graphics;
+        %tmp.73 = getv %tmp.72 :COLOR_TRANSPARENT;
+        invoke %tmp.68 %tmp.69(%tmp.71, %tmp.73);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 35 4 ]
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_35_4_if_stmt:
+        %tmp.75 = lgetv %angle.2;
+        %tmp.76 = 0;
+        %tmp.77 = ne %tmp.75 %tmp.76;
+        bf %tmp.77 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_35_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_35_4_if_true:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_35_20_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 36 6 ]
+        %tmp.78 = lgetv %dc;
+        %tmp.79 = getv function %tmp.78 :fillPolygon;
+        %tmp.80 = newa 3;
+        %tmp.81 = newa 2;
+        %tmp.83 = lgetv %x;
+        %tmp.84 = dup %tmp.81;
+        %tmp.85 = aputv %tmp.84 0 %tmp.83;
+        %tmp.87 = lgetv %y;
+        %tmp.88 = dup %tmp.85;
+        %tmp.89 = aputv %tmp.88 1 %tmp.87;
+        %tmp.90 = dup %tmp.80;
+        %tmp.91 = aputv %tmp.90 0 %tmp.89;
+        %tmp.92 = newa 2;
+        %tmp.94 = lgetv %x;
+        %tmp.95 = 3;
+        %tmp.97 = lgetv %radius;
+        %tmp.98 = mul %tmp.95 %tmp.97;
+        %tmp.99 = getm $.Toybox.Math;
+        %tmp.100 = getv function %tmp.99 :sin;
+        %tmp.102 = lgetv %angle.2;
+        %tmp.103 = getm $.Toybox.Math;
+        %tmp.104 = getv %tmp.103 :PI;
+        %tmp.105 = mul %tmp.102 %tmp.104;
+        %tmp.106 = 180;
+        %tmp.107 = div %tmp.105 %tmp.106;
+        %tmp.108 = invoke %tmp.99 %tmp.100(%tmp.107);
+        %tmp.109 = mul %tmp.98 %tmp.108;
+        %tmp.110 = add %tmp.94 %tmp.109;
+        %tmp.111 = dup %tmp.92;
+        %tmp.112 = aputv %tmp.111 0 %tmp.110;
+        %tmp.114 = lgetv %y;
+        %tmp.115 = 3;
+        %tmp.117 = lgetv %radius;
+        %tmp.118 = mul %tmp.115 %tmp.117;
+        %tmp.119 = getm $.Toybox.Math;
+        %tmp.120 = getv function %tmp.119 :cos;
+        %tmp.122 = lgetv %angle.2;
+        %tmp.123 = getm $.Toybox.Math;
+        %tmp.124 = getv %tmp.123 :PI;
+        %tmp.125 = mul %tmp.122 %tmp.124;
+        %tmp.126 = 180;
+        %tmp.127 = div %tmp.125 %tmp.126;
+        %tmp.128 = invoke %tmp.119 %tmp.120(%tmp.127);
+        %tmp.129 = mul %tmp.118 %tmp.128;
+        %tmp.130 = add %tmp.114 %tmp.129;
+        %tmp.131 = dup %tmp.112;
+        %tmp.132 = aputv %tmp.131 1 %tmp.130;
+        %tmp.133 = dup %tmp.91;
+        %tmp.134 = aputv %tmp.133 1 %tmp.132;
+        %tmp.135 = newa 2;
+        %tmp.137 = lgetv %x;
+        %tmp.138 = 3;
+        %tmp.140 = lgetv %radius;
+        %tmp.141 = mul %tmp.138 %tmp.140;
+        %tmp.142 = getm $.Toybox.Math;
+        %tmp.143 = getv function %tmp.142 :sin;
+        %tmp.144 = 180;
+        %tmp.146 = lgetv %angle.2;
+        %tmp.147 = sub %tmp.144 %tmp.146;
+        %tmp.148 = getm $.Toybox.Math;
+        %tmp.149 = getv %tmp.148 :PI;
+        %tmp.150 = mul %tmp.147 %tmp.149;
+        %tmp.151 = 180;
+        %tmp.152 = div %tmp.150 %tmp.151;
+        %tmp.153 = invoke %tmp.142 %tmp.143(%tmp.152);
+        %tmp.154 = mul %tmp.141 %tmp.153;
+        %tmp.155 = add %tmp.137 %tmp.154;
+        %tmp.156 = dup %tmp.135;
+        %tmp.157 = aputv %tmp.156 0 %tmp.155;
+        %tmp.159 = lgetv %y;
+        %tmp.160 = 3;
+        %tmp.162 = lgetv %radius;
+        %tmp.163 = mul %tmp.160 %tmp.162;
+        %tmp.164 = getm $.Toybox.Math;
+        %tmp.165 = getv function %tmp.164 :cos;
+        %tmp.166 = 180;
+        %tmp.168 = lgetv %angle.2;
+        %tmp.169 = sub %tmp.166 %tmp.168;
+        %tmp.170 = getm $.Toybox.Math;
+        %tmp.171 = getv %tmp.170 :PI;
+        %tmp.172 = mul %tmp.169 %tmp.171;
+        %tmp.173 = 180;
+        %tmp.174 = div %tmp.172 %tmp.173;
+        %tmp.175 = invoke %tmp.164 %tmp.165(%tmp.174);
+        %tmp.176 = mul %tmp.163 %tmp.175;
+        %tmp.177 = add %tmp.159 %tmp.176;
+        %tmp.178 = dup %tmp.157;
+        %tmp.179 = aputv %tmp.178 1 %tmp.177;
+        %tmp.180 = dup %tmp.134;
+        %tmp.181 = aputv %tmp.180 2 %tmp.179;
+        invoke %tmp.78 %tmp.79(%tmp.181);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_35_20_stop:
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_35_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_35_4_if_end:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 48 4 ]
+        %tmp.182 = lgetv %dc;
+        %tmp.183 = getv function %tmp.182 :setClip;
+        %tmp.184 = 0;
+        %tmp.185 = 0;
+        %tmp.186 = 208;
+        %tmp.187 = 208;
+        invoke %tmp.182 %tmp.183(%tmp.184, %tmp.185, %tmp.186, %tmp.187);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_27_4_stop:
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 51; ]
+    function drawDigitLowPower(dc as Dc, x as Number, bits as Number, val as Number) {
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_56_4_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 57 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_56_4_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_56_4_stop" ]
+        %y.1 = local;
+        %tmp.2 = getv ? :CLOCK_Y;
+        lputv %y.1 %tmp.2;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 59 4 ]
+        for @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_test @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_incr @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_init:
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_begin" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_end" ]
+        %i.2 = local;
+        %tmp.3 = 0;
+        lputv %i.2 %tmp.3;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_test:
+        %tmp.5 = lgetv %i.2;
+        %tmp.7 = lgetv %bits;
+        %tmp.8 = lt %tmp.5 %tmp.7;
+        bf %tmp.8 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_begin:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_35_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 60 6 ]
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_60_6_if_stmt:
+        %tmp.10 = lgetv %val;
+        %tmp.11 = 1;
+        %tmp.13 = lgetv %i.2;
+        %tmp.14 = shl %tmp.11 %tmp.13;
+        %tmp.15 = bitand %tmp.10 %tmp.14;
+        bf %tmp.15 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_60_6_if_false;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_60_6_if_true:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_60_26_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 61 8 ]
+        %tmp.16 = self;
+        %tmp.17 = getv function %tmp.16 :drawPacman;
+        %tmp.19 = lgetv %dc;
+        %tmp.21 = lgetv %x;
+        %tmp.23 = lgetv %y.1;
+        %tmp.25 = getv ? :PACMAN_SIZE;
+        %tmp.26 = 1;
+        invoke %tmp.16 %tmp.17(%tmp.19, %tmp.21, %tmp.23, %tmp.25, %tmp.26);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_60_26_stop:
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_60_6_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_60_6_if_false:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_62_13_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 63 8 ]
+        %tmp.27 = self;
+        %tmp.28 = getv function %tmp.27 :drawPacman;
+        %tmp.30 = lgetv %dc;
+        %tmp.32 = lgetv %x;
+        %tmp.34 = lgetv %y.1;
+        %tmp.36 = getv ? :PACMAN_SIZE;
+        %tmp.37 = 4;
+        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32, %tmp.34, %tmp.36, %tmp.37);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_62_13_stop:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_60_6_if_end:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 65 6 ]
+        %tmp.38 = lgetv %y.1;
+        %tmp.40 = getv ? :CLOCK_Y_OFFSET;
+        %tmp.41 = sub %tmp.38 %tmp.40;
+        lputv %y.1 %tmp.41;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_35_stop:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_incr:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 59 ]
+        %tmp.44 = lgetv %i.2;
+        %tmp.45 = add %tmp.44 1;
+        lputv %i.2 %tmp.45;
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_test;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_59_4_for_end:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_56_4_stop:
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 69; ]
+    function drawDigit(dc as Dc, x as Number, itemNum as Number, bits as Number, val as Number) {
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_75_4_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 76 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_75_4_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_75_4_stop" ]
+        %y.1 = local;
+        %tmp.2 = getv ? :CLOCK_Y;
+        lputv %y.1 %tmp.2;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 78 4 ]
+        for @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_test @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_incr @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_init:
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_begin" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_end" ]
+        %i.2 = local;
+        %tmp.3 = 0;
+        lputv %i.2 %tmp.3;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_test:
+        %tmp.5 = lgetv %i.2;
+        %tmp.7 = lgetv %bits;
+        %tmp.8 = lt %tmp.5 %tmp.7;
+        bf %tmp.8 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_begin:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_35_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 79 6 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_35_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_35_stop" ]
+        %phase.3 = local;
+        %tmp.10 = getv ? :frame;
+        %tmp.12 = getv ? :animOffset;
+        %tmp.14 = lgetv %itemNum;
+        %tmp.15 = agetv %tmp.12 %tmp.14;
+        %tmp.16 = add %tmp.10 %tmp.15;
+        %tmp.18 = getv ? :ANIM_PHASES;
+        %tmp.19 = mod %tmp.16 %tmp.18;
+        lputv %phase.3 %tmp.19;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 80 6 ]
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_80_6_if_stmt:
+        %tmp.21 = lgetv %val;
+        %tmp.22 = 1;
+        %tmp.24 = lgetv %i.2;
+        %tmp.25 = shl %tmp.22 %tmp.24;
+        %tmp.26 = bitand %tmp.21 %tmp.25;
+        bf %tmp.26 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_80_6_if_false;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_80_6_if_true:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_80_26_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 81 8 ]
+        %tmp.27 = self;
+        %tmp.28 = getv function %tmp.27 :drawPacman;
+        %tmp.30 = lgetv %dc;
+        %tmp.32 = lgetv %x;
+        %tmp.34 = lgetv %y.1;
+        %tmp.36 = getv ? :PACMAN_SIZE;
+        %tmp.38 = getv ? :animLeft;
+        %tmp.40 = lgetv %phase.3;
+        %tmp.41 = agetv %tmp.38 %tmp.40;
+        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32, %tmp.34, %tmp.36, %tmp.41);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_80_26_stop:
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_80_6_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_80_6_if_false:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_82_13_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 83 8 ]
+        %tmp.42 = self;
+        %tmp.43 = getv function %tmp.42 :drawPacman;
+        %tmp.45 = lgetv %dc;
+        %tmp.47 = lgetv %x;
+        %tmp.49 = lgetv %y.1;
+        %tmp.51 = getv ? :PACMAN_SIZE;
+        %tmp.53 = getv ? :animRight;
+        %tmp.55 = lgetv %phase.3;
+        %tmp.56 = agetv %tmp.53 %tmp.55;
+        invoke %tmp.42 %tmp.43(%tmp.45, %tmp.47, %tmp.49, %tmp.51, %tmp.56);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_82_13_stop:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_80_6_if_end:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 85 6 ]
+        %tmp.57 = lgetv %y.1;
+        %tmp.59 = getv ? :CLOCK_Y_OFFSET;
+        %tmp.60 = sub %tmp.57 %tmp.59;
+        lputv %y.1 %tmp.60;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 86 6 ]
+        %tmp.63 = lgetv %itemNum;
+        %tmp.64 = add %tmp.63 1;
+        lputv %itemNum %tmp.64;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_35_stop:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_incr:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 78 ]
+        %tmp.67 = lgetv %i.2;
+        %tmp.68 = add %tmp.67 1;
+        lputv %i.2 %tmp.68;
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_test;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_78_4_for_end:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_75_4_stop:
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 90; ]
+    function draw(dc as Dc, lowPower as Boolean) {
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_90_47_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 91 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_90_47_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_90_47_stop" ]
+        %date.1 = local;
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        %tmp.2 = getv function %tmp.1 :info;
+        %tmp.3 = getm $.Toybox.Time;
+        %tmp.4 = getv function %tmp.3 :now;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = getm $.Toybox.Time;
+        %tmp.7 = getv %tmp.6 :FORMAT_MEDIUM;
+        %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
+        lputv %date.1 %tmp.8;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 94 4 ]
+        %tmp.9 = lgetv %dc;
+        %tmp.10 = getv function %tmp.9 :setColor;
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_BLACK;
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :COLOR_BLACK;
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 95 4 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :fillRectangle;
+        %tmp.18 = getv ? :COL_X;
+        %tmp.19 = 0;
+        %tmp.20 = agetv %tmp.18 %tmp.19;
+        %tmp.22 = getv ? :PACMAN_SIZE;
+        %tmp.23 = sub %tmp.20 %tmp.22;
+        %tmp.25 = getv ? :CLOCK_Y;
+        %tmp.27 = getv ? :PACMAN_SIZE;
+        %tmp.28 = add %tmp.25 %tmp.27;
+        %tmp.29 = 4;
+        %tmp.31 = getv ? :CLOCK_Y_OFFSET;
+        %tmp.32 = mul %tmp.29 %tmp.31;
+        %tmp.33 = sub %tmp.28 %tmp.32;
+        %tmp.35 = getv ? :COL_X;
+        %tmp.36 = 3;
+        %tmp.37 = agetv %tmp.35 %tmp.36;
+        %tmp.39 = getv ? :COL_X;
+        %tmp.40 = 0;
+        %tmp.41 = agetv %tmp.39 %tmp.40;
+        %tmp.42 = sub %tmp.37 %tmp.41;
+        %tmp.43 = 2;
+        %tmp.45 = getv ? :PACMAN_SIZE;
+        %tmp.46 = mul %tmp.43 %tmp.45;
+        %tmp.47 = add %tmp.42 %tmp.46;
+        %tmp.48 = 4;
+        %tmp.50 = getv ? :CLOCK_Y_OFFSET;
+        %tmp.51 = mul %tmp.48 %tmp.50;
+        invoke %tmp.15 %tmp.16(%tmp.23, %tmp.33, %tmp.47, %tmp.51);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 102 4 ]
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_4_if_stmt:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_8_begin:
+        %tmp.53 = getv ? :frame;
+        %tmp.54 = 2;
+        %tmp.55 = mod %tmp.53 %tmp.54;
+        %tmp.56 = 0;
+        %tmp.57 = eq %tmp.55 %tmp.56;
+        %tmp.58 = dup %tmp.57;
+        bt %tmp.58 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_26_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_26_false:
+        %tmp.60 = lgetv %lowPower;
+        %tmp.61 = or %tmp.57 %tmp.60;
+        push %tmp.61;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_26_end:
+        %tmp.62 = phi [%tmp.58 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_8_begin] [%tmp.61 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_26_false] [%tmp.62 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_26_end];
+        bf %tmp.62 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_4_if_true:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_36_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 103 6 ]
+        %tmp.63 = lgetv %dc;
+        %tmp.64 = getv function %tmp.63 :setColor;
+        %tmp.65 = getm $.Toybox.Graphics;
+        %tmp.66 = getv %tmp.65 :COLOR_WHITE;
+        %tmp.67 = getm $.Toybox.Graphics;
+        %tmp.68 = getv %tmp.67 :COLOR_BLACK;
+        invoke %tmp.63 %tmp.64(%tmp.66, %tmp.68);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 104 6 ]
+        %tmp.69 = lgetv %dc;
+        %tmp.70 = getv function %tmp.69 :fillCircle;
+        %tmp.72 = getv ? :COL_X;
+        %tmp.73 = 1;
+        %tmp.74 = agetv %tmp.72 %tmp.73;
+        %tmp.76 = getv ? :CLOCK_Y;
+        %tmp.78 = getv ? :CLOCK_Y_OFFSET;
+        %tmp.79 = sub %tmp.76 %tmp.78;
+        %tmp.80 = 2;
+        invoke %tmp.69 %tmp.70(%tmp.74, %tmp.79, %tmp.80);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 105 6 ]
+        %tmp.81 = lgetv %dc;
+        %tmp.82 = getv function %tmp.81 :fillCircle;
+        %tmp.84 = getv ? :COL_X;
+        %tmp.85 = 1;
+        %tmp.86 = agetv %tmp.84 %tmp.85;
+        %tmp.88 = getv ? :CLOCK_Y;
+        %tmp.89 = 2;
+        %tmp.91 = getv ? :CLOCK_Y_OFFSET;
+        %tmp.92 = mul %tmp.89 %tmp.91;
+        %tmp.93 = sub %tmp.88 %tmp.92;
+        %tmp.94 = 2;
+        invoke %tmp.81 %tmp.82(%tmp.86, %tmp.93, %tmp.94);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_36_stop:
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_102_4_if_end:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 107 4 ]
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_107_4_if_stmt:
+        %tmp.96 = lgetv %lowPower;
+        bf %tmp.96 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_107_4_if_false;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_107_4_if_true:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_107_18_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 108 6 ]
+        %tmp.97 = self;
+        %tmp.98 = getv function %tmp.97 :drawDigitLowPower;
+        %tmp.100 = lgetv %dc;
+        %tmp.102 = getv ? :COL_X;
+        %tmp.103 = 0;
+        %tmp.104 = agetv %tmp.102 %tmp.103;
+        %tmp.105 = 4;
+        %tmp.106 = lgetv %date.1;
+        %tmp.107 = getv %tmp.106 :hour;
+        %tmp.108 = 13;
+        %tmp.109 = mod %tmp.107 %tmp.108;
+        invoke %tmp.97 %tmp.98(%tmp.100, %tmp.104, %tmp.105, %tmp.109);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 109 6 ]
+        %tmp.110 = self;
+        %tmp.111 = getv function %tmp.110 :drawDigitLowPower;
+        %tmp.113 = lgetv %dc;
+        %tmp.115 = getv ? :COL_X;
+        %tmp.116 = 2;
+        %tmp.117 = agetv %tmp.115 %tmp.116;
+        %tmp.118 = 3;
+        %tmp.119 = lgetv %date.1;
+        %tmp.120 = getv %tmp.119 :min;
+        %tmp.121 = 10;
+        %tmp.122 = div %tmp.120 %tmp.121;
+        invoke %tmp.110 %tmp.111(%tmp.113, %tmp.117, %tmp.118, %tmp.122);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 110 6 ]
+        %tmp.123 = self;
+        %tmp.124 = getv function %tmp.123 :drawDigitLowPower;
+        %tmp.126 = lgetv %dc;
+        %tmp.128 = getv ? :COL_X;
+        %tmp.129 = 3;
+        %tmp.130 = agetv %tmp.128 %tmp.129;
+        %tmp.131 = 4;
+        %tmp.132 = lgetv %date.1;
+        %tmp.133 = getv %tmp.132 :min;
+        %tmp.134 = 10;
+        %tmp.135 = mod %tmp.133 %tmp.134;
+        invoke %tmp.123 %tmp.124(%tmp.126, %tmp.130, %tmp.131, %tmp.135);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_107_18_stop:
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_107_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_107_4_if_false:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_111_11_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 112 6 ]
+        %tmp.136 = self;
+        %tmp.137 = getv function %tmp.136 :drawDigit;
+        %tmp.139 = lgetv %dc;
+        %tmp.141 = getv ? :COL_X;
+        %tmp.142 = 0;
+        %tmp.143 = agetv %tmp.141 %tmp.142;
+        %tmp.144 = 0;
+        %tmp.145 = 4;
+        %tmp.146 = lgetv %date.1;
+        %tmp.147 = getv %tmp.146 :hour;
+        %tmp.148 = 12;
+        %tmp.149 = mod %tmp.147 %tmp.148;
+        invoke %tmp.136 %tmp.137(%tmp.139, %tmp.143, %tmp.144, %tmp.145, %tmp.149);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 113 6 ]
+        %tmp.150 = self;
+        %tmp.151 = getv function %tmp.150 :drawDigit;
+        %tmp.153 = lgetv %dc;
+        %tmp.155 = getv ? :COL_X;
+        %tmp.156 = 2;
+        %tmp.157 = agetv %tmp.155 %tmp.156;
+        %tmp.158 = 4;
+        %tmp.159 = 3;
+        %tmp.160 = lgetv %date.1;
+        %tmp.161 = getv %tmp.160 :min;
+        %tmp.162 = 10;
+        %tmp.163 = div %tmp.161 %tmp.162;
+        invoke %tmp.150 %tmp.151(%tmp.153, %tmp.157, %tmp.158, %tmp.159, %tmp.163);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 114 6 ]
+        %tmp.164 = self;
+        %tmp.165 = getv function %tmp.164 :drawDigit;
+        %tmp.167 = lgetv %dc;
+        %tmp.169 = getv ? :COL_X;
+        %tmp.170 = 3;
+        %tmp.171 = agetv %tmp.169 %tmp.170;
+        %tmp.172 = 7;
+        %tmp.173 = 4;
+        %tmp.174 = lgetv %date.1;
+        %tmp.175 = getv %tmp.174 :min;
+        %tmp.176 = 10;
+        %tmp.177 = mod %tmp.175 %tmp.176;
+        invoke %tmp.164 %tmp.165(%tmp.167, %tmp.171, %tmp.172, %tmp.173, %tmp.177);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc" 115 6 ]
+        %tmp.180 = getv ? :frame;
+        %tmp.181 = add %tmp.180 1;
+        putv self :frame dup %tmp.181;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_111_11_stop:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_107_4_if_end:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_BinaryClock_mc_90_47_stop:
+    }
+}
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/BinaryClock.mc"; @line = 1; ]
+<init> {
+}

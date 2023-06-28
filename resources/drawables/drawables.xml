@@ -1,0 +1,7 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    <bitmap id="Rain" filename="rain.png" dithering="none"/>
+    <bitmap id="Temp" filename="temperature.png" dithering="none"/>
+    <bitmap id="Calories" filename="calories.png" dithering="none"/>
+    <bitmap id="Distance" filename="distance.png" dithering="none"/>
+</drawables>

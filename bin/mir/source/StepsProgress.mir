@@ -1,0 +1,809 @@
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 3; ]
+import Toybox.System;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 4; ]
+import Toybox.Math;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 5; ]
+import Toybox.ActivityMonitor;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 7; ]
+module StepsProgress {
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 8; @position = 8; ]
+    const GHOST_SIZE = 24;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 9; @position = 8; ]
+    const START_ANGLE = 18;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 10; @position = 8; ]
+    const STEP_ANGE = 36;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 11; @position = 8; ]
+    const GHOSTS = 10;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 12; @position = 8; ]
+    const RADIUS = 88;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 13; @position = 8; ]
+    const SCREEN_SIZE = 208;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 14; @position = 8; ]
+    const SCREEN_SIZE_HALF = 104;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 16; ]
+    function drawEmptyGhost(dc as Dc, x as Number, y as Number, s as Number) as Void {
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_21_12_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 22 4 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 23 4 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :setPenWidth;
+        %tmp.9 = 2;
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 24 4 ]
+        %tmp.10 = lgetv %y;
+        %tmp.12 = lgetv %s;
+        %tmp.13 = 0.1;
+        %tmp.14 = mul %tmp.12 %tmp.13;
+        %tmp.15 = sub %tmp.10 %tmp.14;
+        lputv %y %tmp.15;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 25 4 ]
+        %tmp.16 = lgetv %dc;
+        %tmp.17 = getv function %tmp.16 :setClip;
+        %tmp.19 = lgetv %x;
+        %tmp.21 = lgetv %s;
+        %tmp.22 = 2;
+        %tmp.23 = div %tmp.21 %tmp.22;
+        %tmp.24 = sub %tmp.19 %tmp.23;
+        %tmp.26 = lgetv %y;
+        %tmp.28 = lgetv %s;
+        %tmp.29 = 2;
+        %tmp.30 = div %tmp.28 %tmp.29;
+        %tmp.31 = sub %tmp.26 %tmp.30;
+        %tmp.33 = lgetv %s;
+        %tmp.35 = lgetv %s;
+        %tmp.36 = 2;
+        %tmp.37 = div %tmp.35 %tmp.36;
+        invoke %tmp.16 %tmp.17(%tmp.24, %tmp.31, %tmp.33, %tmp.37);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 26 4 ]
+        %tmp.38 = lgetv %dc;
+        %tmp.39 = getv function %tmp.38 :drawCircle;
+        %tmp.41 = lgetv %x;
+        %tmp.43 = lgetv %y;
+        %tmp.45 = lgetv %s;
+        %tmp.46 = 2;
+        %tmp.47 = div %tmp.45 %tmp.46;
+        %tmp.48 = 1;
+        %tmp.49 = sub %tmp.47 %tmp.48;
+        invoke %tmp.38 %tmp.39(%tmp.41, %tmp.43, %tmp.49);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 27 4 ]
+        %tmp.50 = lgetv %dc;
+        %tmp.51 = getv function %tmp.50 :setClip;
+        %tmp.52 = 0;
+        %tmp.53 = 0;
+        %tmp.54 = 208;
+        %tmp.55 = 208;
+        invoke %tmp.50 %tmp.51(%tmp.52, %tmp.53, %tmp.54, %tmp.55);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 28 4 ]
+        %tmp.56 = lgetv %dc;
+        %tmp.57 = getv function %tmp.56 :drawLine;
+        %tmp.59 = lgetv %x;
+        %tmp.61 = lgetv %s;
+        %tmp.62 = 2;
+        %tmp.63 = div %tmp.61 %tmp.62;
+        %tmp.64 = sub %tmp.59 %tmp.63;
+        %tmp.66 = lgetv %y;
+        %tmp.68 = lgetv %x;
+        %tmp.70 = lgetv %s;
+        %tmp.71 = 2;
+        %tmp.72 = div %tmp.70 %tmp.71;
+        %tmp.73 = sub %tmp.68 %tmp.72;
+        %tmp.75 = lgetv %y;
+        %tmp.77 = lgetv %s;
+        %tmp.78 = 0.7;
+        %tmp.79 = mul %tmp.77 %tmp.78;
+        %tmp.80 = add %tmp.75 %tmp.79;
+        invoke %tmp.56 %tmp.57(%tmp.64, %tmp.66, %tmp.73, %tmp.80);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 29 4 ]
+        %tmp.81 = lgetv %dc;
+        %tmp.82 = getv function %tmp.81 :drawLine;
+        %tmp.84 = lgetv %x;
+        %tmp.86 = lgetv %s;
+        %tmp.87 = 2;
+        %tmp.88 = div %tmp.86 %tmp.87;
+        %tmp.89 = add %tmp.84 %tmp.88;
+        %tmp.91 = lgetv %y;
+        %tmp.92 = 1;
+        %tmp.93 = sub %tmp.91 %tmp.92;
+        %tmp.95 = lgetv %x;
+        %tmp.97 = lgetv %s;
+        %tmp.98 = 2;
+        %tmp.99 = div %tmp.97 %tmp.98;
+        %tmp.100 = add %tmp.95 %tmp.99;
+        %tmp.102 = lgetv %y;
+        %tmp.104 = lgetv %s;
+        %tmp.105 = 0.7;
+        %tmp.106 = mul %tmp.104 %tmp.105;
+        %tmp.107 = add %tmp.102 %tmp.106;
+        invoke %tmp.81 %tmp.82(%tmp.89, %tmp.93, %tmp.100, %tmp.107);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 31 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_21_12_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_21_12_stop" ]
+        %step.1 = local;
+        %tmp.109 = lgetv %s;
+        %tmp.110 = 6.0;
+        %tmp.111 = div %tmp.109 %tmp.110;
+        lputv %step.1 %tmp.111;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 32 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_21_12_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_21_12_stop" ]
+        %xpos.2 = local;
+        %tmp.113 = lgetv %x;
+        %tmp.115 = lgetv %s;
+        %tmp.116 = 2;
+        %tmp.117 = div %tmp.115 %tmp.116;
+        %tmp.118 = sub %tmp.113 %tmp.117;
+        lputv %xpos.2 %tmp.118;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 34 4 ]
+        %tmp.119 = lgetv %dc;
+        %tmp.120 = getv function %tmp.119 :drawLine;
+        %tmp.122 = lgetv %xpos.2;
+        %tmp.124 = lgetv %y;
+        %tmp.126 = lgetv %s;
+        %tmp.127 = 0.7;
+        %tmp.128 = mul %tmp.126 %tmp.127;
+        %tmp.129 = add %tmp.124 %tmp.128;
+        %tmp.131 = lgetv %xpos.2;
+        %tmp.133 = lgetv %step.1;
+        %tmp.134 = add %tmp.131 %tmp.133;
+        %tmp.136 = lgetv %y;
+        %tmp.138 = lgetv %s;
+        %tmp.139 = 0.5;
+        %tmp.140 = mul %tmp.138 %tmp.139;
+        %tmp.141 = add %tmp.136 %tmp.140;
+        invoke %tmp.119 %tmp.120(%tmp.122, %tmp.129, %tmp.134, %tmp.141);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 35 4 ]
+        %tmp.142 = lgetv %dc;
+        %tmp.143 = getv function %tmp.142 :drawLine;
+        %tmp.145 = lgetv %xpos.2;
+        %tmp.147 = lgetv %step.1;
+        %tmp.148 = add %tmp.145 %tmp.147;
+        %tmp.150 = lgetv %y;
+        %tmp.152 = lgetv %s;
+        %tmp.153 = 0.5;
+        %tmp.154 = mul %tmp.152 %tmp.153;
+        %tmp.155 = add %tmp.150 %tmp.154;
+        %tmp.157 = lgetv %xpos.2;
+        %tmp.158 = 2;
+        %tmp.160 = lgetv %step.1;
+        %tmp.161 = mul %tmp.158 %tmp.160;
+        %tmp.162 = add %tmp.157 %tmp.161;
+        %tmp.164 = lgetv %y;
+        %tmp.166 = lgetv %s;
+        %tmp.167 = 0.7;
+        %tmp.168 = mul %tmp.166 %tmp.167;
+        %tmp.169 = add %tmp.164 %tmp.168;
+        invoke %tmp.142 %tmp.143(%tmp.148, %tmp.155, %tmp.162, %tmp.169);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 36 4 ]
+        %tmp.170 = lgetv %xpos.2;
+        %tmp.171 = 2;
+        %tmp.173 = lgetv %step.1;
+        %tmp.174 = mul %tmp.171 %tmp.173;
+        %tmp.175 = add %tmp.170 %tmp.174;
+        lputv %xpos.2 %tmp.175;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 37 4 ]
+        %tmp.176 = lgetv %dc;
+        %tmp.177 = getv function %tmp.176 :drawLine;
+        %tmp.179 = lgetv %xpos.2;
+        %tmp.181 = lgetv %y;
+        %tmp.183 = lgetv %s;
+        %tmp.184 = 0.7;
+        %tmp.185 = mul %tmp.183 %tmp.184;
+        %tmp.186 = add %tmp.181 %tmp.185;
+        %tmp.188 = lgetv %xpos.2;
+        %tmp.190 = lgetv %step.1;
+        %tmp.191 = add %tmp.188 %tmp.190;
+        %tmp.193 = lgetv %y;
+        %tmp.195 = lgetv %s;
+        %tmp.196 = 0.5;
+        %tmp.197 = mul %tmp.195 %tmp.196;
+        %tmp.198 = add %tmp.193 %tmp.197;
+        invoke %tmp.176 %tmp.177(%tmp.179, %tmp.186, %tmp.191, %tmp.198);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 38 4 ]
+        %tmp.199 = lgetv %dc;
+        %tmp.200 = getv function %tmp.199 :drawLine;
+        %tmp.202 = lgetv %xpos.2;
+        %tmp.204 = lgetv %step.1;
+        %tmp.205 = add %tmp.202 %tmp.204;
+        %tmp.207 = lgetv %y;
+        %tmp.209 = lgetv %s;
+        %tmp.210 = 0.5;
+        %tmp.211 = mul %tmp.209 %tmp.210;
+        %tmp.212 = add %tmp.207 %tmp.211;
+        %tmp.214 = lgetv %xpos.2;
+        %tmp.215 = 2;
+        %tmp.217 = lgetv %step.1;
+        %tmp.218 = mul %tmp.215 %tmp.217;
+        %tmp.219 = add %tmp.214 %tmp.218;
+        %tmp.221 = lgetv %y;
+        %tmp.223 = lgetv %s;
+        %tmp.224 = 0.7;
+        %tmp.225 = mul %tmp.223 %tmp.224;
+        %tmp.226 = add %tmp.221 %tmp.225;
+        invoke %tmp.199 %tmp.200(%tmp.205, %tmp.212, %tmp.219, %tmp.226);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 39 4 ]
+        %tmp.227 = lgetv %xpos.2;
+        %tmp.228 = 2;
+        %tmp.230 = lgetv %step.1;
+        %tmp.231 = mul %tmp.228 %tmp.230;
+        %tmp.232 = add %tmp.227 %tmp.231;
+        lputv %xpos.2 %tmp.232;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 40 4 ]
+        %tmp.233 = lgetv %dc;
+        %tmp.234 = getv function %tmp.233 :drawLine;
+        %tmp.236 = lgetv %xpos.2;
+        %tmp.238 = lgetv %y;
+        %tmp.240 = lgetv %s;
+        %tmp.241 = 0.7;
+        %tmp.242 = mul %tmp.240 %tmp.241;
+        %tmp.243 = add %tmp.238 %tmp.242;
+        %tmp.245 = lgetv %xpos.2;
+        %tmp.247 = lgetv %step.1;
+        %tmp.248 = add %tmp.245 %tmp.247;
+        %tmp.250 = lgetv %y;
+        %tmp.252 = lgetv %s;
+        %tmp.253 = 0.5;
+        %tmp.254 = mul %tmp.252 %tmp.253;
+        %tmp.255 = add %tmp.250 %tmp.254;
+        invoke %tmp.233 %tmp.234(%tmp.236, %tmp.243, %tmp.248, %tmp.255);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 41 4 ]
+        %tmp.256 = lgetv %dc;
+        %tmp.257 = getv function %tmp.256 :drawLine;
+        %tmp.259 = lgetv %xpos.2;
+        %tmp.261 = lgetv %step.1;
+        %tmp.262 = add %tmp.259 %tmp.261;
+        %tmp.264 = lgetv %y;
+        %tmp.266 = lgetv %s;
+        %tmp.267 = 0.5;
+        %tmp.268 = mul %tmp.266 %tmp.267;
+        %tmp.269 = add %tmp.264 %tmp.268;
+        %tmp.271 = lgetv %x;
+        %tmp.273 = lgetv %s;
+        %tmp.274 = 2;
+        %tmp.275 = div %tmp.273 %tmp.274;
+        %tmp.276 = add %tmp.271 %tmp.275;
+        %tmp.278 = lgetv %y;
+        %tmp.280 = lgetv %s;
+        %tmp.281 = 0.7;
+        %tmp.282 = mul %tmp.280 %tmp.281;
+        %tmp.283 = add %tmp.278 %tmp.282;
+        invoke %tmp.256 %tmp.257(%tmp.262, %tmp.269, %tmp.276, %tmp.283);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 43 4 ]
+        %tmp.284 = lgetv %dc;
+        %tmp.285 = getv function %tmp.284 :drawEllipse;
+        %tmp.287 = lgetv %x;
+        %tmp.289 = lgetv %s;
+        %tmp.290 = 0.17;
+        %tmp.291 = mul %tmp.289 %tmp.290;
+        %tmp.292 = sub %tmp.287 %tmp.291;
+        %tmp.294 = lgetv %y;
+        %tmp.296 = lgetv %s;
+        %tmp.297 = 8;
+        %tmp.298 = div %tmp.296 %tmp.297;
+        %tmp.300 = lgetv %s;
+        %tmp.301 = 6;
+        %tmp.302 = div %tmp.300 %tmp.301;
+        invoke %tmp.284 %tmp.285(%tmp.292, %tmp.294, %tmp.298, %tmp.302);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 44 4 ]
+        %tmp.303 = lgetv %dc;
+        %tmp.304 = getv function %tmp.303 :drawEllipse;
+        %tmp.306 = lgetv %x;
+        %tmp.308 = lgetv %s;
+        %tmp.309 = 0.17;
+        %tmp.310 = mul %tmp.308 %tmp.309;
+        %tmp.311 = add %tmp.306 %tmp.310;
+        %tmp.313 = lgetv %y;
+        %tmp.315 = lgetv %s;
+        %tmp.316 = 8;
+        %tmp.317 = div %tmp.315 %tmp.316;
+        %tmp.319 = lgetv %s;
+        %tmp.320 = 6;
+        %tmp.321 = div %tmp.319 %tmp.320;
+        invoke %tmp.303 %tmp.304(%tmp.311, %tmp.313, %tmp.317, %tmp.321);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 45 4 ]
+        %tmp.322 = lgetv %dc;
+        %tmp.323 = getv function %tmp.322 :setPenWidth;
+        %tmp.324 = 1;
+        invoke %tmp.322 %tmp.323(%tmp.324);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_21_12_stop:
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 48; ]
+    function drawGhost(dc as Dc, x as Number, y as Number, s as Number, col as Graphics.ColorValue) as Void {
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_54_12_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 55 4 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.4 = lgetv %col;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 56 4 ]
+        %tmp.7 = lgetv %y;
+        %tmp.9 = lgetv %s;
+        %tmp.10 = 0.1;
+        %tmp.11 = mul %tmp.9 %tmp.10;
+        %tmp.12 = sub %tmp.7 %tmp.11;
+        lputv %y %tmp.12;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 57 4 ]
+        %tmp.13 = lgetv %dc;
+        %tmp.14 = getv function %tmp.13 :fillCircle;
+        %tmp.16 = lgetv %x;
+        %tmp.18 = lgetv %y;
+        %tmp.20 = lgetv %s;
+        %tmp.21 = 2;
+        %tmp.22 = div %tmp.20 %tmp.21;
+        %tmp.23 = 1;
+        %tmp.24 = sub %tmp.22 %tmp.23;
+        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18, %tmp.24);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 58 4 ]
+        %tmp.25 = lgetv %dc;
+        %tmp.26 = getv function %tmp.25 :fillRectangle;
+        %tmp.28 = lgetv %x;
+        %tmp.30 = lgetv %s;
+        %tmp.31 = 2;
+        %tmp.32 = div %tmp.30 %tmp.31;
+        %tmp.33 = sub %tmp.28 %tmp.32;
+        %tmp.35 = lgetv %y;
+        %tmp.37 = lgetv %s;
+        %tmp.39 = lgetv %s;
+        %tmp.40 = 0.7;
+        %tmp.41 = mul %tmp.39 %tmp.40;
+        invoke %tmp.25 %tmp.26(%tmp.33, %tmp.35, %tmp.37, %tmp.41);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 59 4 ]
+        %tmp.42 = lgetv %dc;
+        %tmp.43 = getv function %tmp.42 :setColor;
+        %tmp.44 = getm $.Toybox.Graphics;
+        %tmp.45 = getv %tmp.44 :COLOR_BLACK;
+        %tmp.46 = getm $.Toybox.Graphics;
+        %tmp.47 = getv %tmp.46 :COLOR_BLACK;
+        invoke %tmp.42 %tmp.43(%tmp.45, %tmp.47);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 60 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_54_12_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_54_12_stop" ]
+        %step.1 = local;
+        %tmp.49 = lgetv %s;
+        %tmp.50 = 6.0;
+        %tmp.51 = div %tmp.49 %tmp.50;
+        lputv %step.1 %tmp.51;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 61 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_54_12_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_54_12_stop" ]
+        %xpos.2 = local;
+        %tmp.53 = lgetv %x;
+        %tmp.55 = lgetv %s;
+        %tmp.56 = 2;
+        %tmp.57 = div %tmp.55 %tmp.56;
+        %tmp.58 = sub %tmp.53 %tmp.57;
+        lputv %xpos.2 %tmp.58;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 62 4 ]
+        for @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_test @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_incr @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_init:
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_begin" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_end" ]
+        %i.3 = local;
+        %tmp.59 = 0;
+        lputv %i.3 %tmp.59;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_test:
+        %tmp.61 = lgetv %i.3;
+        %tmp.62 = 3;
+        %tmp.63 = lt %tmp.61 %tmp.62;
+        bf %tmp.63 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_begin:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_32_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 63 6 ]
+        %tmp.64 = lgetv %dc;
+        %tmp.65 = getv function %tmp.64 :fillPolygon;
+        %tmp.66 = newa 3;
+        %tmp.67 = newa 2;
+        %tmp.69 = lgetv %xpos.2;
+        %tmp.70 = dup %tmp.67;
+        %tmp.71 = aputv %tmp.70 0 %tmp.69;
+        %tmp.73 = lgetv %y;
+        %tmp.75 = lgetv %s;
+        %tmp.76 = 0.7;
+        %tmp.77 = mul %tmp.75 %tmp.76;
+        %tmp.78 = add %tmp.73 %tmp.77;
+        %tmp.79 = dup %tmp.71;
+        %tmp.80 = aputv %tmp.79 1 %tmp.78;
+        %tmp.81 = dup %tmp.66;
+        %tmp.82 = aputv %tmp.81 0 %tmp.80;
+        %tmp.83 = newa 2;
+        %tmp.85 = lgetv %xpos.2;
+        %tmp.87 = lgetv %step.1;
+        %tmp.88 = add %tmp.85 %tmp.87;
+        %tmp.89 = dup %tmp.83;
+        %tmp.90 = aputv %tmp.89 0 %tmp.88;
+        %tmp.92 = lgetv %y;
+        %tmp.94 = lgetv %s;
+        %tmp.95 = 0.5;
+        %tmp.96 = mul %tmp.94 %tmp.95;
+        %tmp.97 = add %tmp.92 %tmp.96;
+        %tmp.98 = dup %tmp.90;
+        %tmp.99 = aputv %tmp.98 1 %tmp.97;
+        %tmp.100 = dup %tmp.82;
+        %tmp.101 = aputv %tmp.100 1 %tmp.99;
+        %tmp.102 = newa 2;
+        %tmp.104 = lgetv %xpos.2;
+        %tmp.105 = 2;
+        %tmp.107 = lgetv %step.1;
+        %tmp.108 = mul %tmp.105 %tmp.107;
+        %tmp.109 = add %tmp.104 %tmp.108;
+        %tmp.110 = dup %tmp.102;
+        %tmp.111 = aputv %tmp.110 0 %tmp.109;
+        %tmp.113 = lgetv %y;
+        %tmp.115 = lgetv %s;
+        %tmp.116 = 0.7;
+        %tmp.117 = mul %tmp.115 %tmp.116;
+        %tmp.118 = add %tmp.113 %tmp.117;
+        %tmp.119 = dup %tmp.111;
+        %tmp.120 = aputv %tmp.119 1 %tmp.118;
+        %tmp.121 = dup %tmp.101;
+        %tmp.122 = aputv %tmp.121 2 %tmp.120;
+        invoke %tmp.64 %tmp.65(%tmp.122);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 68 6 ]
+        %tmp.123 = lgetv %xpos.2;
+        %tmp.124 = 2;
+        %tmp.126 = lgetv %step.1;
+        %tmp.127 = mul %tmp.124 %tmp.126;
+        %tmp.128 = add %tmp.123 %tmp.127;
+        lputv %xpos.2 %tmp.128;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_32_stop:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_incr:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 62 ]
+        %tmp.131 = lgetv %i.3;
+        %tmp.132 = add %tmp.131 1;
+        lputv %i.3 %tmp.132;
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_test;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_62_4_for_end:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 70 4 ]
+        %tmp.133 = lgetv %dc;
+        %tmp.134 = getv function %tmp.133 :setColor;
+        %tmp.135 = getm $.Toybox.Graphics;
+        %tmp.136 = getv %tmp.135 :COLOR_WHITE;
+        %tmp.137 = getm $.Toybox.Graphics;
+        %tmp.138 = getv %tmp.137 :COLOR_BLACK;
+        invoke %tmp.133 %tmp.134(%tmp.136, %tmp.138);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 71 4 ]
+        %tmp.139 = lgetv %dc;
+        %tmp.140 = getv function %tmp.139 :fillEllipse;
+        %tmp.142 = lgetv %x;
+        %tmp.144 = lgetv %s;
+        %tmp.145 = 0.12;
+        %tmp.146 = mul %tmp.144 %tmp.145;
+        %tmp.147 = sub %tmp.142 %tmp.146;
+        %tmp.149 = lgetv %y;
+        %tmp.151 = lgetv %s;
+        %tmp.152 = 7.5;
+        %tmp.153 = div %tmp.151 %tmp.152;
+        %tmp.155 = lgetv %s;
+        %tmp.156 = 5;
+        %tmp.157 = div %tmp.155 %tmp.156;
+        invoke %tmp.139 %tmp.140(%tmp.147, %tmp.149, %tmp.153, %tmp.157);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 72 4 ]
+        %tmp.158 = lgetv %dc;
+        %tmp.159 = getv function %tmp.158 :fillEllipse;
+        %tmp.161 = lgetv %x;
+        %tmp.163 = lgetv %s;
+        %tmp.164 = 0.25;
+        %tmp.165 = mul %tmp.163 %tmp.164;
+        %tmp.166 = add %tmp.161 %tmp.165;
+        %tmp.168 = lgetv %y;
+        %tmp.170 = lgetv %s;
+        %tmp.171 = 7.5;
+        %tmp.172 = div %tmp.170 %tmp.171;
+        %tmp.174 = lgetv %s;
+        %tmp.175 = 5;
+        %tmp.176 = div %tmp.174 %tmp.175;
+        invoke %tmp.158 %tmp.159(%tmp.166, %tmp.168, %tmp.172, %tmp.176);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 73 4 ]
+        %tmp.177 = lgetv %dc;
+        %tmp.178 = getv function %tmp.177 :setColor;
+        %tmp.179 = getm $.Toybox.Graphics;
+        %tmp.180 = getv %tmp.179 :COLOR_BLACK;
+        %tmp.181 = getm $.Toybox.Graphics;
+        %tmp.182 = getv %tmp.181 :COLOR_BLACK;
+        invoke %tmp.177 %tmp.178(%tmp.180, %tmp.182);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 74 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_54_12_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_54_12_stop" ]
+        %eyesize.4 = local;
+        %tmp.184 = lgetv %s;
+        %tmp.185 = 15.0;
+        %tmp.186 = div %tmp.184 %tmp.185;
+        lputv %eyesize.4 %tmp.186;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 75 4 ]
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_75_4_if_stmt:
+        %tmp.188 = lgetv %eyesize.4;
+        %tmp.189 = 2;
+        %tmp.190 = lt %tmp.188 %tmp.189;
+        bf %tmp.190 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_75_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_75_4_if_true:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_75_21_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 76 6 ]
+        %tmp.191 = 2;
+        lputv %eyesize.4 %tmp.191;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_75_21_stop:
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_75_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_75_4_if_end:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 78 4 ]
+        %tmp.192 = lgetv %dc;
+        %tmp.193 = getv function %tmp.192 :fillEllipse;
+        %tmp.195 = lgetv %x;
+        %tmp.197 = lgetv %s;
+        %tmp.198 = 0.12;
+        %tmp.199 = mul %tmp.197 %tmp.198;
+        %tmp.200 = sub %tmp.195 %tmp.199;
+        %tmp.202 = lgetv %eyesize.4;
+        %tmp.203 = 3;
+        %tmp.204 = div %tmp.202 %tmp.203;
+        %tmp.205 = add %tmp.200 %tmp.204;
+        %tmp.207 = lgetv %y;
+        %tmp.209 = lgetv %eyesize.4;
+        %tmp.210 = 0.7;
+        %tmp.211 = mul %tmp.209 %tmp.210;
+        %tmp.212 = add %tmp.207 %tmp.211;
+        %tmp.214 = lgetv %eyesize.4;
+        %tmp.216 = lgetv %eyesize.4;
+        invoke %tmp.192 %tmp.193(%tmp.205, %tmp.212, %tmp.214, %tmp.216);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 84 4 ]
+        %tmp.217 = lgetv %dc;
+        %tmp.218 = getv function %tmp.217 :fillEllipse;
+        %tmp.220 = lgetv %x;
+        %tmp.222 = lgetv %s;
+        %tmp.223 = 0.25;
+        %tmp.224 = mul %tmp.222 %tmp.223;
+        %tmp.225 = add %tmp.220 %tmp.224;
+        %tmp.227 = lgetv %eyesize.4;
+        %tmp.228 = 3;
+        %tmp.229 = div %tmp.227 %tmp.228;
+        %tmp.230 = add %tmp.225 %tmp.229;
+        %tmp.232 = lgetv %y;
+        %tmp.234 = lgetv %eyesize.4;
+        %tmp.235 = 0.7;
+        %tmp.236 = mul %tmp.234 %tmp.235;
+        %tmp.237 = add %tmp.232 %tmp.236;
+        %tmp.239 = lgetv %eyesize.4;
+        %tmp.241 = lgetv %eyesize.4;
+        invoke %tmp.217 %tmp.218(%tmp.230, %tmp.237, %tmp.239, %tmp.241);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_54_12_stop:
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 92; ]
+    function draw(dc as Dc) as Void {
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 93 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_stop" ]
+        %PROGRESS_COLORS.1 = local;
+        %tmp.1 = newa 11;
+        %tmp.2 = getm $.Toybox.Graphics;
+        %tmp.3 = getv %tmp.2 :COLOR_WHITE;
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 0 %tmp.3;
+        %tmp.6 = getm $.Toybox.Graphics;
+        %tmp.7 = getv %tmp.6 :COLOR_PURPLE;
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = getm $.Toybox.Graphics;
+        %tmp.11 = getv %tmp.10 :COLOR_RED;
+        %tmp.12 = dup %tmp.9;
+        %tmp.13 = aputv %tmp.12 2 %tmp.11;
+        %tmp.14 = getm $.Toybox.Graphics;
+        %tmp.15 = getv %tmp.14 :COLOR_RED;
+        %tmp.16 = dup %tmp.13;
+        %tmp.17 = aputv %tmp.16 3 %tmp.15;
+        %tmp.18 = getm $.Toybox.Graphics;
+        %tmp.19 = getv %tmp.18 :COLOR_YELLOW;
+        %tmp.20 = dup %tmp.17;
+        %tmp.21 = aputv %tmp.20 4 %tmp.19;
+        %tmp.22 = getm $.Toybox.Graphics;
+        %tmp.23 = getv %tmp.22 :COLOR_YELLOW;
+        %tmp.24 = dup %tmp.21;
+        %tmp.25 = aputv %tmp.24 5 %tmp.23;
+        %tmp.26 = getm $.Toybox.Graphics;
+        %tmp.27 = getv %tmp.26 :COLOR_DK_BLUE;
+        %tmp.28 = dup %tmp.25;
+        %tmp.29 = aputv %tmp.28 6 %tmp.27;
+        %tmp.30 = getm $.Toybox.Graphics;
+        %tmp.31 = getv %tmp.30 :COLOR_DK_BLUE;
+        %tmp.32 = dup %tmp.29;
+        %tmp.33 = aputv %tmp.32 7 %tmp.31;
+        %tmp.34 = getm $.Toybox.Graphics;
+        %tmp.35 = getv %tmp.34 :COLOR_BLUE;
+        %tmp.36 = dup %tmp.33;
+        %tmp.37 = aputv %tmp.36 8 %tmp.35;
+        %tmp.38 = getm $.Toybox.Graphics;
+        %tmp.39 = getv %tmp.38 :COLOR_BLUE;
+        %tmp.40 = dup %tmp.37;
+        %tmp.41 = aputv %tmp.40 9 %tmp.39;
+        %tmp.42 = getm $.Toybox.Graphics;
+        %tmp.43 = getv %tmp.42 :COLOR_GREEN;
+        %tmp.44 = dup %tmp.41;
+        %tmp.45 = aputv %tmp.44 10 %tmp.43;
+        lputv %PROGRESS_COLORS.1 %tmp.45;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 107 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_stop" ]
+        %steps.2 = local;
+        %tmp.46 = getm $.Toybox.ActivityMonitor;
+        %tmp.47 = getv function %tmp.46 :getInfo;
+        %tmp.48 = invoke %tmp.46 %tmp.47();
+        %tmp.49 = getv %tmp.48 :steps;
+        lputv %steps.2 %tmp.49;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 108 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_stop" ]
+        %stepGoal.3 = local;
+        %tmp.50 = getm $.Toybox.ActivityMonitor;
+        %tmp.51 = getv function %tmp.50 :getInfo;
+        %tmp.52 = invoke %tmp.50 %tmp.51();
+        %tmp.53 = getv %tmp.52 :stepGoal;
+        lputv %stepGoal.3 %tmp.53;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 109 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_stop" ]
+        %progress.4 = local;
+        %tmp.55 = lgetv %steps.2;
+        %tmp.56 = 100;
+        %tmp.57 = mul %tmp.55 %tmp.56;
+        %tmp.59 = lgetv %stepGoal.3;
+        %tmp.60 = div %tmp.57 %tmp.59;
+        lputv %progress.4 %tmp.60;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 111 4 ]
+        %tmp.61 = getm $.Toybox.System;
+        %tmp.62 = getv function %tmp.61 :print;
+        %tmp.63 = "steps percent:";
+        invoke %tmp.61 %tmp.62(%tmp.63);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 112 4 ]
+        %tmp.64 = getm $.Toybox.System;
+        %tmp.65 = getv function %tmp.64 :println;
+        %tmp.67 = lgetv %progress.4;
+        invoke %tmp.64 %tmp.65(%tmp.67);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 114 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_stop" ]
+        %colIndex.5 = local;
+        %tmp.69 = lgetv %progress.4;
+        %tmp.71 = getv ? :GHOSTS;
+        %tmp.72 = div %tmp.69 %tmp.71;
+        lputv %colIndex.5 %tmp.72;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 115 4 ]
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_115_4_if_stmt:
+        %tmp.74 = lgetv %colIndex.5;
+        %tmp.75 = 10;
+        %tmp.76 = gt %tmp.74 %tmp.75;
+        bf %tmp.76 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_115_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_115_4_if_true:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_115_23_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 116 6 ]
+        %tmp.77 = 10;
+        lputv %colIndex.5 %tmp.77;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_115_23_stop:
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_115_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_115_4_if_end:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 118 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_stop" ]
+        %col.6 = local;
+        %tmp.79 = lgetv %PROGRESS_COLORS.1;
+        %tmp.81 = lgetv %colIndex.5;
+        %tmp.82 = agetv %tmp.79 %tmp.81;
+        lputv %col.6 %tmp.82;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 119 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_stop" ]
+        %angle.7 = local;
+        %tmp.84 = getv ? :START_ANGLE;
+        lputv %angle.7 %tmp.84;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 120 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_stop" ]
+        %stepAngle.8 = local;
+        %tmp.86 = getv ? :STEP_ANGE;
+        lputv %stepAngle.8 %tmp.86;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 122 4 ]
+        for @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_test @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_incr @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_init:
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_begin" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_end" ]
+        %i.9 = local;
+        %tmp.87 = 0;
+        lputv %i.9 %tmp.87;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_test:
+        %tmp.89 = lgetv %i.9;
+        %tmp.91 = getv ? :GHOSTS;
+        %tmp.92 = lt %tmp.89 %tmp.91;
+        bf %tmp.92 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_begin:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_37_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 123 6 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_37_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_37_stop" ]
+        %x.10 = local;
+        %tmp.93 = 104;
+        %tmp.95 = getv ? :RADIUS;
+        %tmp.96 = getm $.Toybox.Math;
+        %tmp.97 = getv function %tmp.96 :sin;
+        %tmp.99 = lgetv %angle.7;
+        %tmp.100 = getm $.Toybox.Math;
+        %tmp.101 = getv %tmp.100 :PI;
+        %tmp.102 = mul %tmp.99 %tmp.101;
+        %tmp.103 = 180;
+        %tmp.104 = div %tmp.102 %tmp.103;
+        %tmp.105 = invoke %tmp.96 %tmp.97(%tmp.104);
+        %tmp.106 = mul %tmp.95 %tmp.105;
+        %tmp.107 = add %tmp.93 %tmp.106;
+        %tmp.108 = getv function %tmp.107 :toNumber;
+        %tmp.109 = invoke %tmp.107 %tmp.108();
+        lputv %x.10 %tmp.109;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 124 6 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_37_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_37_stop" ]
+        %y.11 = local;
+        %tmp.110 = 104;
+        %tmp.112 = getv ? :RADIUS;
+        %tmp.113 = getm $.Toybox.Math;
+        %tmp.114 = getv function %tmp.113 :cos;
+        %tmp.116 = lgetv %angle.7;
+        %tmp.117 = getm $.Toybox.Math;
+        %tmp.118 = getv %tmp.117 :PI;
+        %tmp.119 = mul %tmp.116 %tmp.118;
+        %tmp.120 = 180;
+        %tmp.121 = div %tmp.119 %tmp.120;
+        %tmp.122 = invoke %tmp.113 %tmp.114(%tmp.121);
+        %tmp.123 = mul %tmp.112 %tmp.122;
+        %tmp.124 = sub %tmp.110 %tmp.123;
+        %tmp.125 = getv function %tmp.124 :toNumber;
+        %tmp.126 = invoke %tmp.124 %tmp.125();
+        lputv %y.11 %tmp.126;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 125 6 ]
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_125_6_if_stmt:
+        %tmp.128 = lgetv %progress.4;
+        %tmp.130 = lgetv %i.9;
+        %tmp.131 = 1;
+        %tmp.132 = add %tmp.130 %tmp.131;
+        %tmp.134 = getv ? :GHOSTS;
+        %tmp.135 = mul %tmp.132 %tmp.134;
+        %tmp.136 = gte %tmp.128 %tmp.135;
+        bf %tmp.136 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_125_6_if_false;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_125_6_if_true:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_125_40_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 126 8 ]
+        %tmp.137 = self;
+        %tmp.138 = getv function %tmp.137 :drawGhost;
+        %tmp.140 = lgetv %dc;
+        %tmp.142 = lgetv %x.10;
+        %tmp.144 = lgetv %y.11;
+        %tmp.146 = getv ? :GHOST_SIZE;
+        %tmp.148 = lgetv %col.6;
+        invoke %tmp.137 %tmp.138(%tmp.140, %tmp.142, %tmp.144, %tmp.146, %tmp.148);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_125_40_stop:
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_125_6_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_125_6_if_false:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_127_13_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 128 8 ]
+        %tmp.149 = self;
+        %tmp.150 = getv function %tmp.149 :drawEmptyGhost;
+        %tmp.152 = lgetv %dc;
+        %tmp.154 = lgetv %x.10;
+        %tmp.156 = lgetv %y.11;
+        %tmp.158 = getv ? :GHOST_SIZE;
+        %tmp.159 = 2;
+        %tmp.160 = sub %tmp.158 %tmp.159;
+        invoke %tmp.149 %tmp.150(%tmp.152, %tmp.154, %tmp.156, %tmp.160);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_127_13_stop:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_125_6_if_end:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 130 6 ]
+        %tmp.161 = lgetv %angle.7;
+        %tmp.163 = lgetv %stepAngle.8;
+        %tmp.164 = add %tmp.161 %tmp.163;
+        lputv %angle.7 %tmp.164;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_37_stop:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_incr:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc" 122 ]
+        %tmp.167 = lgetv %i.9;
+        %tmp.168 = add %tmp.167 1;
+        lputv %i.9 %tmp.168;
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_test;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_122_4_for_end:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_StepsProgress_mc_92_34_stop:
+    }
+}
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/StepsProgress.mc"; @line = 1; ]
+<init> {
+}

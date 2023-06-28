@@ -1,0 +1,351 @@
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 1; ]
+import Toybox.Math;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 2; ]
+import Toybox.Graphics;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 3; ]
+import Toybox.Lang;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 4; ]
+import Toybox.System;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 5; ]
+import Toybox.WatchUi;
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 7; ]
+class CircularProgress{
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 7; ]
+    <init> {
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 8 14 ]
+        %tmp.1 = newa 0;
+        putv self :mCirclePoints %tmp.1;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 13 8 ]
+        %tmp.2 = getm $.Toybox.Math;
+        %tmp.3 = getv %tmp.2 :PI;
+        %tmp.4 = 8;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        putv self :STEP %tmp.5;
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 8; @position = 14; ]
+    private
+    var mCirclePoints as Array<Array<Float>>;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 9; @position = 14; ]
+    private
+    var screenHalf;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 10; @position = 14; ]
+    private
+    var mColor;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 11; @position = 14; ]
+    private
+    var mPrevProgress;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 13; @position = 8; ]
+    const STEP;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 14; @position = 8; ]
+    const OFFSET = 5;
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 16; ]
+    function initialize(color as Graphics.ColorType) as Void {
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_16_51_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 17 4 ]
+        %tmp.2 = lgetv %color;
+        putv self :mColor %tmp.2;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 18 4 ]
+        %tmp.3 = 1;
+        %tmp.4 = sub 0 %tmp.3;
+        putv self :mPrevProgress %tmp.4;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 19 4 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_16_51_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_16_51_stop" ]
+        %settings.1 = local;
+        %tmp.5 = getm $.Toybox.System;
+        %tmp.6 = getv function %tmp.5 :getDeviceSettings;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %settings.1 %tmp.7;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 20 4 ]
+        %tmp.8 = lgetv %settings.1;
+        %tmp.9 = getv %tmp.8 :screenWidth;
+        %tmp.10 = 2;
+        %tmp.11 = div %tmp.9 %tmp.10;
+        putv self :screenHalf %tmp.11;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 22 4 ]
+        for @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_test @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_incr @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_init:
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_begin" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_end" ]
+        %idx.2 = local;
+        %tmp.12 = 0;
+        lputv %idx.2 %tmp.12;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_test:
+        %tmp.14 = lgetv %idx.2;
+        %tmp.15 = 15;
+        %tmp.16 = lte %tmp.14 %tmp.15;
+        bf %tmp.16 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_begin:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_40_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 23 6 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_40_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_40_stop" ]
+        %angle.3 = local;
+        %tmp.18 = lgetv %idx.2;
+        %tmp.19 = 1;
+        %tmp.20 = add %tmp.18 %tmp.19;
+        %tmp.22 = getv ? :STEP;
+        %tmp.23 = mul %tmp.20 %tmp.22;
+        lputv %angle.3 %tmp.23;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 24 6 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_40_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_40_stop" ]
+        %pos.4 = local;
+        %tmp.24 = newa 2;
+        %tmp.25 = getm $.Toybox.Math;
+        %tmp.26 = getv function %tmp.25 :floor;
+        %tmp.28 = getv ? :screenHalf;
+        %tmp.30 = getv ? :screenHalf;
+        %tmp.32 = getv ? :OFFSET;
+        %tmp.33 = add %tmp.30 %tmp.32;
+        %tmp.34 = getm $.Toybox.Math;
+        %tmp.35 = getv function %tmp.34 :sin;
+        %tmp.37 = lgetv %angle.3;
+        %tmp.38 = invoke %tmp.34 %tmp.35(%tmp.37);
+        %tmp.39 = mul %tmp.33 %tmp.38;
+        %tmp.40 = add %tmp.28 %tmp.39;
+        %tmp.41 = invoke %tmp.25 %tmp.26(%tmp.40);
+        %tmp.42 = dup %tmp.24;
+        %tmp.43 = aputv %tmp.42 0 %tmp.41;
+        %tmp.44 = getm $.Toybox.Math;
+        %tmp.45 = getv function %tmp.44 :floor;
+        %tmp.47 = getv ? :screenHalf;
+        %tmp.49 = getv ? :screenHalf;
+        %tmp.51 = getv ? :OFFSET;
+        %tmp.52 = add %tmp.49 %tmp.51;
+        %tmp.53 = getm $.Toybox.Math;
+        %tmp.54 = getv function %tmp.53 :cos;
+        %tmp.56 = lgetv %angle.3;
+        %tmp.57 = invoke %tmp.53 %tmp.54(%tmp.56);
+        %tmp.58 = mul %tmp.52 %tmp.57;
+        %tmp.59 = sub %tmp.47 %tmp.58;
+        %tmp.60 = invoke %tmp.44 %tmp.45(%tmp.59);
+        %tmp.61 = dup %tmp.43;
+        %tmp.62 = aputv %tmp.61 1 %tmp.60;
+        lputv %pos.4 %tmp.62;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 28 6 ]
+        %tmp.64 = getv ? :mCirclePoints;
+        %tmp.65 = getv function %tmp.64 :add;
+        %tmp.67 = lgetv %pos.4;
+        invoke %tmp.64 %tmp.65(%tmp.67);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_40_stop:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_incr:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 22 ]
+        %tmp.70 = lgetv %idx.2;
+        %tmp.71 = add %tmp.70 1;
+        lputv %idx.2 %tmp.71;
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_test;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_22_4_for_end:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 31 4 ]
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_31_4_if_stmt:
+        %tmp.73 = getv ? :Toybox;
+        %tmp.74 = getv %tmp.73 :Graphics;
+        %tmp.76 = const :BufferedBitmap;
+        %tmp.77 = canhazplz %tmp.74 %tmp.76;
+        bf %tmp.77 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_31_4_if_false;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_31_4_if_true:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_31_45_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 32 6 ]
+        %tmp.78 = getm $.Toybox.System;
+        %tmp.79 = getv function %tmp.78 :println;
+        %tmp.80 = "buffered bitmap on";
+        invoke %tmp.78 %tmp.79(%tmp.80);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_31_45_stop:
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_31_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_31_4_if_false:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_33_11_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 34 6 ]
+        %tmp.81 = getm $.Toybox.System;
+        %tmp.82 = getv function %tmp.81 :println;
+        %tmp.83 = "buffered bitmap off";
+        invoke %tmp.81 %tmp.82(%tmp.83);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_33_11_stop:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_31_4_if_end:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_16_51_stop:
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 38; ]
+    function drawInternal(dc as Dc, progress as Number) {
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_38_54_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 39 4 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.4 = getv ? :mColor;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 40 4 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 41 4 ]
+        %tmp.9 = lgetv %dc;
+        %tmp.10 = getv function %tmp.9 :setPenWidth;
+        %tmp.11 = 5;
+        invoke %tmp.9 %tmp.10(%tmp.11);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 42 4 ]
+        %tmp.12 = lgetv %dc;
+        %tmp.13 = getv function %tmp.12 :drawCircle;
+        %tmp.15 = getv ? :screenHalf;
+        %tmp.17 = getv ? :screenHalf;
+        %tmp.19 = getv ? :screenHalf;
+        %tmp.20 = 3;
+        %tmp.21 = sub %tmp.19 %tmp.20;
+        invoke %tmp.12 %tmp.13(%tmp.15, %tmp.17, %tmp.21);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 44 4 ]
+        %tmp.22 = lgetv %dc;
+        %tmp.23 = getv function %tmp.22 :setColor;
+        %tmp.24 = getm $.Toybox.Graphics;
+        %tmp.25 = getv %tmp.24 :COLOR_BLACK;
+        %tmp.26 = getm $.Toybox.Graphics;
+        %tmp.27 = getv %tmp.26 :COLOR_BLACK;
+        invoke %tmp.22 %tmp.23(%tmp.25, %tmp.27);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 45 4 ]
+        %tmp.28 = lgetv %dc;
+        %tmp.29 = getv function %tmp.28 :setPenWidth;
+        %tmp.30 = 1;
+        invoke %tmp.28 %tmp.29(%tmp.30);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 47 4 ]
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_4_if_stmt:
+        %tmp.32 = lgetv %progress;
+        %tmp.33 = 360;
+        %tmp.34 = lt %tmp.32 %tmp.33;
+        bf %tmp.34 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_4_if_true:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_24_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 48 6 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_24_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_24_stop" ]
+        %anglerad.1 = local;
+        %tmp.36 = lgetv %progress;
+        %tmp.37 = getm $.Toybox.Math;
+        %tmp.38 = getv %tmp.37 :PI;
+        %tmp.39 = mul %tmp.36 %tmp.38;
+        %tmp.40 = 180;
+        %tmp.41 = div %tmp.39 %tmp.40;
+        lputv %anglerad.1 %tmp.41;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 50 6 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_24_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_24_stop" ]
+        %arr.2 = local;
+        %tmp.42 = newa 1;
+        %tmp.43 = newa 2;
+        %tmp.45 = getv ? :screenHalf;
+        %tmp.46 = dup %tmp.43;
+        %tmp.47 = aputv %tmp.46 0 %tmp.45;
+        %tmp.49 = getv ? :screenHalf;
+        %tmp.50 = dup %tmp.47;
+        %tmp.51 = aputv %tmp.50 1 %tmp.49;
+        %tmp.52 = dup %tmp.42;
+        %tmp.53 = aputv %tmp.52 0 %tmp.51;
+        lputv %arr.2 %tmp.53;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 51 6 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_24_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_24_stop" ]
+        %pos.3 = local;
+        %tmp.54 = newa 2;
+        %tmp.56 = getv ? :screenHalf;
+        %tmp.58 = getv ? :screenHalf;
+        %tmp.59 = getm $.Toybox.Math;
+        %tmp.60 = getv function %tmp.59 :sin;
+        %tmp.62 = lgetv %anglerad.1;
+        %tmp.63 = invoke %tmp.59 %tmp.60(%tmp.62);
+        %tmp.64 = mul %tmp.58 %tmp.63;
+        %tmp.65 = add %tmp.56 %tmp.64;
+        %tmp.66 = dup %tmp.54;
+        %tmp.67 = aputv %tmp.66 0 %tmp.65;
+        %tmp.69 = getv ? :screenHalf;
+        %tmp.71 = getv ? :screenHalf;
+        %tmp.72 = getm $.Toybox.Math;
+        %tmp.73 = getv function %tmp.72 :cos;
+        %tmp.75 = lgetv %anglerad.1;
+        %tmp.76 = invoke %tmp.72 %tmp.73(%tmp.75);
+        %tmp.77 = mul %tmp.71 %tmp.76;
+        %tmp.78 = sub %tmp.69 %tmp.77;
+        %tmp.79 = dup %tmp.67;
+        %tmp.80 = aputv %tmp.79 1 %tmp.78;
+        lputv %pos.3 %tmp.80;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 55 6 ]
+        %tmp.81 = lgetv %arr.2;
+        %tmp.82 = getv function %tmp.81 :add;
+        %tmp.84 = lgetv %pos.3;
+        invoke %tmp.81 %tmp.82(%tmp.84);
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 57 6 ]
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_24_start" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_24_stop" ]
+        %start.4 = local;
+        %tmp.85 = getm $.Toybox.Math;
+        %tmp.86 = getv function %tmp.85 :floor;
+        %tmp.88 = lgetv %anglerad.1;
+        %tmp.90 = getv ? :STEP;
+        %tmp.91 = div %tmp.88 %tmp.90;
+        %tmp.92 = invoke %tmp.85 %tmp.86(%tmp.91);
+        %tmp.93 = getv function %tmp.92 :toNumber;
+        %tmp.94 = invoke %tmp.92 %tmp.93();
+        lputv %start.4 %tmp.94;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 59 6 ]
+        for @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_test @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_incr @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_init:
+        [ "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_begin" "_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_end" ]
+        %i.5 = local;
+        %tmp.96 = lgetv %start.4;
+        lputv %i.5 %tmp.96;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_test:
+        %tmp.98 = lgetv %i.5;
+        %tmp.100 = getv ? :mCirclePoints;
+        %tmp.101 = getv function %tmp.100 :size;
+        %tmp.102 = invoke %tmp.100 %tmp.101();
+        %tmp.103 = lt %tmp.98 %tmp.102;
+        bf %tmp.103 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_begin:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_60_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 60 8 ]
+        %tmp.104 = lgetv %arr.2;
+        %tmp.105 = getv function %tmp.104 :add;
+        %tmp.107 = getv ? :mCirclePoints;
+        %tmp.109 = lgetv %i.5;
+        %tmp.110 = agetv %tmp.107 %tmp.109;
+        invoke %tmp.104 %tmp.105(%tmp.110);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_60_stop:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_incr:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 59 ]
+        %tmp.111 = lgetv %i.5;
+        %tmp.112 = 1;
+        %tmp.113 = add %tmp.111 %tmp.112;
+        lputv %i.5 %tmp.113;
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_test;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_59_6_for_end:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 62 6 ]
+        %tmp.114 = lgetv %dc;
+        %tmp.115 = getv function %tmp.114 :fillPolygon;
+        %tmp.117 = lgetv %arr.2;
+        invoke %tmp.114 %tmp.115(%tmp.117);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_24_stop:
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_47_4_if_end:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_38_54_stop:
+    }
+    [ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 66; ]
+    function draw(dc as Dc, progress as Number) as Void {
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_66_54_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 67 4 ]
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_67_4_if_stmt:
+        %tmp.2 = lgetv %progress;
+        %tmp.4 = getv ? :mPrevProgress;
+        %tmp.5 = ne %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_67_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_67_4_if_true:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_67_35_start:
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 69 6 ]
+        %tmp.7 = lgetv %progress;
+        putv self :mPrevProgress %tmp.7;
+[ "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc" 71 6 ]
+        %tmp.8 = self;
+        %tmp.9 = getv function %tmp.8 :drawInternal;
+        %tmp.11 = lgetv %dc;
+        %tmp.13 = lgetv %progress;
+        invoke %tmp.8 %tmp.9(%tmp.11, %tmp.13);
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_67_35_stop:
+        goto @_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_67_4_if_end;
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_67_4_if_end:
+_Users_sowisz_Programming_monkeyC_PacMacWatchFace_source_CircularProgress_mc_66_54_stop:
+    }
+}
+[ @file = "/Users/sowisz/Programming/monkeyC/PacMacWatchFace/source/CircularProgress.mc"; @line = 1; ]
+<init> {
+}

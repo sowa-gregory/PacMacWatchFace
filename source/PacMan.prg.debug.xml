@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManApp.mc" id="1" lineNum="26" parent="globals" pc="268435457" symbol="getApp"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManApp.mc" id="1" lineNum="27" parent="globals" pc="268435467" symbol="getApp"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManApp.mc" id="2" lineNum="5" parent="globals/PacManApp" pc="268435483" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManApp.mc" id="4" lineNum="20" parent="globals/PacManApp" pc="268435502" symbol="getInitialView"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManApp.mc" id="4" lineNum="21" parent="globals/PacManApp" pc="268435504" symbol="getInitialView"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManApp.mc" id="5" lineNum="7" parent="globals/PacManApp" pc="268435545" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManApp.mc" id="5" lineNum="8" parent="globals/PacManApp" pc="268435547" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/gen/006-B3869-00/source/Rez.mcgen" id="7" lineNum="7" parent="globals/Rez" pc="268435566" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="8" lineNum="11" parent="globals/BinaryClock" pc="268435590" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="8" lineNum="9" parent="globals/BinaryClock" pc="268435590" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="8" lineNum="12" parent="globals/BinaryClock" pc="268435747" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="8" lineNum="13" parent="globals/BinaryClock" pc="268435839" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="8" lineNum="19" parent="globals/BinaryClock" pc="268435931" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="9" lineNum="7" parent="globals/CircularProgress" pc="268435998" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="9" lineNum="8" parent="globals/CircularProgress" pc="268435998" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="38" parent="globals/CircularProgress" pc="268436013" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="39" parent="globals/CircularProgress" pc="268436017" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="40" parent="globals/CircularProgress" pc="268436042" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="41" parent="globals/CircularProgress" pc="268436054" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="42" parent="globals/CircularProgress" pc="268436071" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="44" parent="globals/CircularProgress" pc="268436113" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="45" parent="globals/CircularProgress" pc="268436135" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="47" parent="globals/CircularProgress" pc="268436152" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="48" parent="globals/CircularProgress" pc="268436163" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="50" parent="globals/CircularProgress" pc="268436179" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="51" parent="globals/CircularProgress" pc="268436233" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="55" parent="globals/CircularProgress" pc="268436327" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="57" parent="globals/CircularProgress" pc="268436341" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="59" parent="globals/CircularProgress" pc="268436375" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="60" parent="globals/CircularProgress" pc="268436402" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="10" lineNum="62" parent="globals/CircularProgress" pc="268436438" symbol="drawInternal"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="16" parent="globals/CircularProgress" pc="268436453" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="17" parent="globals/CircularProgress" pc="268436457" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="18" parent="globals/CircularProgress" pc="268436467" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="19" parent="globals/CircularProgress" pc="268436480" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="20" parent="globals/CircularProgress" pc="268436497" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="22" parent="globals/CircularProgress" pc="268436519" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="23" parent="globals/CircularProgress" pc="268436537" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="24" parent="globals/CircularProgress" pc="268436553" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="28" parent="globals/CircularProgress" pc="268436689" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="31" parent="globals/CircularProgress" pc="268436722" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="32" parent="globals/CircularProgress" pc="268436749" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="11" lineNum="34" parent="globals/CircularProgress" pc="268436773" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="12" lineNum="66" parent="globals/CircularProgress" pc="268436795" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="12" lineNum="67" parent="globals/CircularProgress" pc="268436797" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="12" lineNum="69" parent="globals/CircularProgress" pc="268436811" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/CircularProgress.mc" id="12" lineNum="71" parent="globals/CircularProgress" pc="268436821" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="13" lineNum="7" parent="globals/PacManView" pc="268436838" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="15" lineNum="63" parent="globals/PacManView" pc="268436857" symbol="onPartialUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="15" lineNum="64" parent="globals/PacManView" pc="268436859" symbol="onPartialUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="17" lineNum="15" parent="globals/PacManView" pc="268436884" symbol="onLayout"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="17" lineNum="16" parent="globals/PacManView" pc="268436886" symbol="onLayout"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="17" lineNum="17" parent="globals/PacManView" pc="268436927" symbol="onLayout"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="17" lineNum="18" parent="globals/PacManView" pc="268436949" symbol="onLayout"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="17" lineNum="19" parent="globals/PacManView" pc="268436971" symbol="onLayout"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="19" lineNum="8" parent="globals/PacManView" pc="268436994" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="19" lineNum="9" parent="globals/PacManView" pc="268436996" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="19" lineNum="11" parent="globals/PacManView" pc="268437014" symbol="initialize"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="33" parent="globals/PacManView" pc="268437036" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="34" parent="globals/PacManView" pc="268437038" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="36" parent="globals/PacManView" pc="268437060" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="38" parent="globals/PacManView" pc="268437072" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="39" parent="globals/PacManView" pc="268437096" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="40" parent="globals/PacManView" pc="268437120" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="41" parent="globals/PacManView" pc="268437144" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="42" parent="globals/PacManView" pc="268437168" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="44" parent="globals/PacManView" pc="268437192" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="45" parent="globals/PacManView" pc="268437209" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="47" parent="globals/PacManView" pc="268437236" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="21" lineNum="48" parent="globals/PacManView" pc="268437253" symbol="onUpdate"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="22" lineNum="22" parent="globals/PacManView" pc="268437273" symbol="timerCallback"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/PacManView.mc" id="22" lineNum="23" parent="globals/PacManView" pc="268437275" symbol="timerCallback"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="23" lineNum="14" parent="globals/Weather" pc="268437292" symbol="loadRes"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="23" lineNum="15" parent="globals/Weather" pc="268437302" symbol="loadRes"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="23" lineNum="16" parent="globals/Weather" pc="268437349" symbol="loadRes"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="19" parent="globals/Weather" pc="268437397" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="20" parent="globals/Weather" pc="268437409" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="21" parent="globals/Weather" pc="268437432" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="22" parent="globals/Weather" pc="268437455" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="23" parent="globals/Weather" pc="268437474" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="24" parent="globals/Weather" pc="268437492" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="25" parent="globals/Weather" pc="268437514" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="26" parent="globals/Weather" pc="268437544" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="27" parent="globals/Weather" pc="268437551" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="36" parent="globals/Weather" pc="268437600" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="38" parent="globals/Weather" pc="268437620" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="39" parent="globals/Weather" pc="268437659" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Weather.mc" id="24" lineNum="40" parent="globals/Weather" pc="268437666" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="16" parent="globals/StepsProgress" pc="268437704" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="22" parent="globals/StepsProgress" pc="268437716" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="23" parent="globals/StepsProgress" pc="268437738" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="24" parent="globals/StepsProgress" pc="268437755" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="25" parent="globals/StepsProgress" pc="268437768" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="26" parent="globals/StepsProgress" pc="268437812" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="27" parent="globals/StepsProgress" pc="268437842" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="28" parent="globals/StepsProgress" pc="268437874" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="29" parent="globals/StepsProgress" pc="268437921" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="31" parent="globals/StepsProgress" pc="268437974" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="32" parent="globals/StepsProgress" pc="268437984" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="34" parent="globals/StepsProgress" pc="268437997" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="35" parent="globals/StepsProgress" pc="268438038" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="36" parent="globals/StepsProgress" pc="268438088" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="37" parent="globals/StepsProgress" pc="268438101" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="38" parent="globals/StepsProgress" pc="268438142" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="39" parent="globals/StepsProgress" pc="268438192" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="40" parent="globals/StepsProgress" pc="268438205" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="41" parent="globals/StepsProgress" pc="268438246" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="43" parent="globals/StepsProgress" pc="268438296" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="44" parent="globals/StepsProgress" pc="268438337" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="25" lineNum="45" parent="globals/StepsProgress" pc="268438378" symbol="drawEmptyGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="92" parent="globals/StepsProgress" pc="268438396" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="93" parent="globals/StepsProgress" pc="268438408" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="107" parent="globals/StepsProgress" pc="268438559" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="108" parent="globals/StepsProgress" pc="268438582" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="109" parent="globals/StepsProgress" pc="268438605" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="111" parent="globals/StepsProgress" pc="268438618" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="112" parent="globals/StepsProgress" pc="268438639" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="114" parent="globals/StepsProgress" pc="268438657" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="115" parent="globals/StepsProgress" pc="268438667" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="116" parent="globals/StepsProgress" pc="268438678" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="118" parent="globals/StepsProgress" pc="268438685" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="119" parent="globals/StepsProgress" pc="268438692" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="120" parent="globals/StepsProgress" pc="268438699" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="122" parent="globals/StepsProgress" pc="268438706" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="123" parent="globals/StepsProgress" pc="268438724" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="124" parent="globals/StepsProgress" pc="268438776" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="125" parent="globals/StepsProgress" pc="268438828" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="126" parent="globals/StepsProgress" pc="268438848" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="128" parent="globals/StepsProgress" pc="268438876" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="26" lineNum="130" parent="globals/StepsProgress" pc="268438899" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="48" parent="globals/StepsProgress" pc="268438920" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="55" parent="globals/StepsProgress" pc="268438932" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="56" parent="globals/StepsProgress" pc="268438951" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="57" parent="globals/StepsProgress" pc="268438964" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="58" parent="globals/StepsProgress" pc="268438994" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="59" parent="globals/StepsProgress" pc="268439029" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="60" parent="globals/StepsProgress" pc="268439051" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="61" parent="globals/StepsProgress" pc="268439061" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="62" parent="globals/StepsProgress" pc="268439074" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="63" parent="globals/StepsProgress" pc="268439092" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="68" parent="globals/StepsProgress" pc="268439251" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="70" parent="globals/StepsProgress" pc="268439277" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="71" parent="globals/StepsProgress" pc="268439299" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="72" parent="globals/StepsProgress" pc="268439340" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="73" parent="globals/StepsProgress" pc="268439381" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="74" parent="globals/StepsProgress" pc="268439403" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="75" parent="globals/StepsProgress" pc="268439413" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="76" parent="globals/StepsProgress" pc="268439424" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="78" parent="globals/StepsProgress" pc="268439431" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/StepsProgress.mc" id="27" lineNum="84" parent="globals/StepsProgress" pc="268439478" symbol="drawGhost"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Calories.mc" id="28" lineNum="13" parent="globals/Calories" pc="268439526" symbol="loadRes"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Calories.mc" id="28" lineNum="14" parent="globals/Calories" pc="268439536" symbol="loadRes"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Calories.mc" id="29" lineNum="17" parent="globals/Calories" pc="268439584" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Calories.mc" id="29" lineNum="18" parent="globals/Calories" pc="268439596" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Calories.mc" id="29" lineNum="19" parent="globals/Calories" pc="268439619" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Calories.mc" id="29" lineNum="20" parent="globals/Calories" pc="268439632" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Calories.mc" id="29" lineNum="22" parent="globals/Calories" pc="268439652" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Calories.mc" id="29" lineNum="23" parent="globals/Calories" pc="268439674" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Calories.mc" id="29" lineNum="25" parent="globals/Calories" pc="268439701" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Distance.mc" id="30" lineNum="13" parent="globals/Distance" pc="268439739" symbol="loadRes"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Distance.mc" id="30" lineNum="14" parent="globals/Distance" pc="268439749" symbol="loadRes"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Distance.mc" id="31" lineNum="17" parent="globals/Distance" pc="268439797" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Distance.mc" id="31" lineNum="18" parent="globals/Distance" pc="268439809" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Distance.mc" id="31" lineNum="19" parent="globals/Distance" pc="268439831" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Distance.mc" id="31" lineNum="20" parent="globals/Distance" pc="268439860" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Distance.mc" id="31" lineNum="21" parent="globals/Distance" pc="268439873" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Distance.mc" id="31" lineNum="23" parent="globals/Distance" pc="268439893" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Distance.mc" id="31" lineNum="24" parent="globals/Distance" pc="268439915" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/Distance.mc" id="31" lineNum="26" parent="globals/Distance" pc="268439942" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="32" lineNum="21" parent="globals/BinaryClock" pc="268439980" symbol="drawPacman"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="32" lineNum="28" parent="globals/BinaryClock" pc="268439992" symbol="drawPacman"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="32" lineNum="30" parent="globals/BinaryClock" pc="268440091" symbol="drawPacman"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="32" lineNum="31" parent="globals/BinaryClock" pc="268440113" symbol="drawPacman"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="32" lineNum="32" parent="globals/BinaryClock" pc="268440131" symbol="drawPacman"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="32" lineNum="33" parent="globals/BinaryClock" pc="268440144" symbol="drawPacman"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="32" lineNum="34" parent="globals/BinaryClock" pc="268440194" symbol="drawPacman"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="32" lineNum="35" parent="globals/BinaryClock" pc="268440216" symbol="drawPacman"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="32" lineNum="36" parent="globals/BinaryClock" pc="268440227" symbol="drawPacman"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="32" lineNum="48" parent="globals/BinaryClock" pc="268440515" symbol="drawPacman"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="33" lineNum="51" parent="globals/BinaryClock" pc="268440548" symbol="drawDigit"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="33" lineNum="58" parent="globals/BinaryClock" pc="268440560" symbol="drawDigit"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="33" lineNum="60" parent="globals/BinaryClock" pc="268440567" symbol="drawDigit"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="33" lineNum="61" parent="globals/BinaryClock" pc="268440582" symbol="drawDigit"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="33" lineNum="62" parent="globals/BinaryClock" pc="268440610" symbol="drawDigit"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="33" lineNum="63" parent="globals/BinaryClock" pc="268440625" symbol="drawDigit"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="33" lineNum="65" parent="globals/BinaryClock" pc="268440662" symbol="drawDigit"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="33" lineNum="67" parent="globals/BinaryClock" pc="268440696" symbol="drawDigit"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="33" lineNum="68" parent="globals/BinaryClock" pc="268440706" symbol="drawDigit"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="72" parent="globals/BinaryClock" pc="268440730" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="73" parent="globals/BinaryClock" pc="268440742" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="74" parent="globals/BinaryClock" pc="268440779" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="77" parent="globals/BinaryClock" pc="268440853" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="78" parent="globals/BinaryClock" pc="268440875" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="85" parent="globals/BinaryClock" pc="268440952" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="86" parent="globals/BinaryClock" pc="268440975" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="87" parent="globals/BinaryClock" pc="268440997" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="88" parent="globals/BinaryClock" pc="268441033" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="90" parent="globals/BinaryClock" pc="268441069" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="91" parent="globals/BinaryClock" pc="268441121" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="92" parent="globals/BinaryClock" pc="268441173" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/BinaryClock.mc" id="34" lineNum="93" parent="globals/BinaryClock" pc="268441225" symbol="draw"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/gen/006-B3869-00/source/Rez.mcgen" id="35" lineNum="23" parent="globals/Rez/Layouts" pc="268441245" symbol="WatchFace"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/gen/006-B3869-00/source/Rez.mcgen" id="35" lineNum="24" parent="globals/Rez/Layouts" pc="268441257" symbol="WatchFace"/>
+        <entry filename="/Users/sowisz/Programming/monkeyC/PacMacWatchFace/PacMan/source/gen/006-B3869-00/source/Rez.mcgen" id="35" lineNum="26" parent="globals/Rez/Layouts" pc="268441369" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="16" object="true" symbol="CircularProgress"/>
+        <entry id="8390101" object="true" symbol="BufferedBitmap"/>
+        <entry field="true" id="36" symbol="frame"/>
+        <entry id="8389346" symbol="text"/>
+        <entry field="true" id="32" symbol="animOffset"/>
+        <entry field="true" id="40" symbol="&lt;globals/CircularProgress/&lt;&gt;mPrevProgress&gt;"/>
+        <entry id="37" method="true" symbol="drawInternal"/>
+        <entry id="27" method="true" symbol="drawGhost"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="10" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="8388924" module="true" symbol="Gregorian"/>
+        <entry id="2" module="true" symbol="globals/BinaryClock"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="28" symbol="calBmp"/>
+        <entry id="3" module="true" symbol="globals/Calories"/>
+        <entry field="true" id="47" symbol="AppName"/>
+        <entry id="8388633" module="true" symbol="ActivityMonitor"/>
+        <entry field="true" id="46" symbol="Temp"/>
+        <entry id="11" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="26" method="true" symbol="drawEmptyGhost"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry field="true" id="17" module="true" symbol="Distance"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8390097" method="true" symbol="onPartialUpdate"/>
+        <entry id="5" module="true" symbol="globals/Rez"/>
+        <entry id="20" module="true" symbol="StepsProgress"/>
+        <entry id="21" method="true" symbol="loadRes"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8391489" module="true" symbol="Weather"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry field="true" id="42" symbol="px"/>
+        <entry id="25" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="9" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="4" module="true" symbol="globals/Distance"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="35" method="true" symbol="drawPacman"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry field="true" id="22" symbol="rainBmp"/>
+        <entry id="8" module="true" symbol="globals/Rez/JsonData"/>
+        <entry id="12" module="true" symbol="globals/StepsProgress"/>
+        <entry id="34" method="true" symbol="drawDigit"/>
+        <entry id="6" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="39" symbol="&lt;globals/CircularProgress/&lt;&gt;mColor&gt;"/>
+        <entry id="18" object="true" symbol="PacManApp"/>
+        <entry field="true" id="45" symbol="Rain"/>
+        <entry field="true" id="31" symbol="animLeft"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="43" method="true" symbol="timerCallback"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry field="true" id="23" symbol="temperatureBmp"/>
+        <entry id="8389068" method="true" symbol="draw"/>
+        <entry field="true" id="44" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="29" symbol="distBmp"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry id="19" object="true" symbol="PacManView"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389347" symbol="color"/>
+        <entry id="14" module="true" symbol="BinaryClock"/>
+        <entry field="true" id="41" symbol="&lt;globals/CircularProgress/&lt;&gt;screenHalf&gt;"/>
+        <entry id="24" module="true" symbol="Layouts"/>
+        <entry field="true" id="15" module="true" symbol="Calories"/>
+        <entry field="true" id="30" symbol="COL_X"/>
+        <entry id="7" module="true" symbol="globals/Rez/Fonts"/>
+        <entry id="13" module="true" symbol="globals/Weather"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry field="true" id="33" symbol="animRight"/>
+        <entry field="true" id="38" symbol="&lt;globals/CircularProgress/&lt;&gt;mCirclePoints&gt;"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268436452" name="dc" stackId="1" startPc="268436013"/>
+        <entry arg="true" endPc="268436452" name="progress" stackId="2" startPc="268436013"/>
+        <entry endPc="268436451" name="anglerad" stackId="3" startPc="268436163"/>
+        <entry endPc="268436451" name="arr" stackId="4" startPc="268436163"/>
+        <entry endPc="268436451" name="pos" stackId="5" startPc="268436163"/>
+        <entry endPc="268436451" name="start" stackId="6" startPc="268436163"/>
+        <entry endPc="268436437" name="i" stackId="7" startPc="268436402"/>
+        <entry arg="true" endPc="268436794" name="color" stackId="1" startPc="268436453"/>
+        <entry endPc="268436793" name="settings" stackId="2" startPc="268436457"/>
+        <entry endPc="268436721" name="idx" stackId="3" startPc="268436537"/>
+        <entry endPc="268436708" name="angle" stackId="4" startPc="268436537"/>
+        <entry endPc="268436708" name="pos" stackId="5" startPc="268436537"/>
+        <entry arg="true" endPc="268436837" name="dc" stackId="1" startPc="268436795"/>
+        <entry arg="true" endPc="268436837" name="progress" stackId="2" startPc="268436795"/>
+        <entry arg="true" endPc="268436883" name="dc" stackId="1" startPc="268436857"/>
+        <entry arg="true" endPc="268436993" name="dc" stackId="1" startPc="268436884"/>
+        <entry arg="true" endPc="268437272" name="dc" stackId="1" startPc="268437036"/>
+        <entry arg="true" endPc="268437703" name="dc" stackId="1" startPc="268437397"/>
+        <entry endPc="268437702" name="temperature" stackId="2" startPc="268437409"/>
+        <entry endPc="268437702" name="prec" stackId="3" startPc="268437409"/>
+        <entry endPc="268437702" name="precString" stackId="4" startPc="268437409"/>
+        <entry endPc="268437702" name="width" stackId="5" startPc="268437409"/>
+        <entry arg="true" endPc="268438395" name="dc" stackId="1" startPc="268437704"/>
+        <entry arg="true" endPc="268438395" name="x" stackId="2" startPc="268437704"/>
+        <entry arg="true" endPc="268438395" name="y" stackId="3" startPc="268437704"/>
+        <entry arg="true" endPc="268438395" name="s" stackId="4" startPc="268437704"/>
+        <entry endPc="268438394" name="step" stackId="5" startPc="268437716"/>
+        <entry endPc="268438394" name="xpos" stackId="6" startPc="268437716"/>
+        <entry arg="true" endPc="268438919" name="dc" stackId="1" startPc="268438396"/>
+        <entry endPc="268438918" name="PROGRESS_COLORS" stackId="2" startPc="268438408"/>
+        <entry endPc="268438918" name="steps" stackId="3" startPc="268438408"/>
+        <entry endPc="268438918" name="stepGoal" stackId="4" startPc="268438408"/>
+        <entry endPc="268438918" name="progress" stackId="5" startPc="268438408"/>
+        <entry endPc="268438918" name="colIndex" stackId="6" startPc="268438408"/>
+        <entry endPc="268438918" name="col" stackId="7" startPc="268438408"/>
+        <entry endPc="268438918" name="angle" stackId="8" startPc="268438408"/>
+        <entry endPc="268438918" name="stepAngle" stackId="9" startPc="268438408"/>
+        <entry endPc="268438918" name="i" stackId="10" startPc="268438724"/>
+        <entry endPc="268438905" name="x" stackId="11" startPc="268438724"/>
+        <entry endPc="268438905" name="y" stackId="12" startPc="268438724"/>
+        <entry arg="true" endPc="268439525" name="dc" stackId="1" startPc="268438920"/>
+        <entry arg="true" endPc="268439525" name="x" stackId="2" startPc="268438920"/>
+        <entry arg="true" endPc="268439525" name="y" stackId="3" startPc="268438920"/>
+        <entry arg="true" endPc="268439525" name="s" stackId="4" startPc="268438920"/>
+        <entry arg="true" endPc="268439525" name="col" stackId="5" startPc="268438920"/>
+        <entry endPc="268439524" name="step" stackId="6" startPc="268438932"/>
+        <entry endPc="268439524" name="xpos" stackId="7" startPc="268438932"/>
+        <entry endPc="268439276" name="i" stackId="8" startPc="268439092"/>
+        <entry endPc="268439524" name="eyesize" stackId="9" startPc="268438932"/>
+        <entry arg="true" endPc="268439738" name="dc" stackId="1" startPc="268439584"/>
+        <entry endPc="268439737" name="cals" stackId="2" startPc="268439596"/>
+        <entry endPc="268439737" name="calsString" stackId="3" startPc="268439596"/>
+        <entry endPc="268439737" name="width" stackId="4" startPc="268439596"/>
+        <entry endPc="268439737" name="startPos" stackId="5" startPc="268439596"/>
+        <entry arg="true" endPc="268439979" name="dc" stackId="1" startPc="268439797"/>
+        <entry endPc="268439978" name="dist" stackId="2" startPc="268439809"/>
+        <entry endPc="268439978" name="distString" stackId="3" startPc="268439809"/>
+        <entry endPc="268439978" name="width" stackId="4" startPc="268439809"/>
+        <entry endPc="268439978" name="startPos" stackId="5" startPc="268439809"/>
+        <entry arg="true" endPc="268440547" name="dc" stackId="1" startPc="268439980"/>
+        <entry arg="true" endPc="268440547" name="x" stackId="2" startPc="268439980"/>
+        <entry arg="true" endPc="268440547" name="y" stackId="3" startPc="268439980"/>
+        <entry arg="true" endPc="268440547" name="radius" stackId="4" startPc="268439980"/>
+        <entry arg="true" endPc="268440547" name="frame" stackId="5" startPc="268439980"/>
+        <entry endPc="268440546" name="angles" stackId="6" startPc="268439992"/>
+        <entry endPc="268440546" name="angle" stackId="7" startPc="268439992"/>
+        <entry arg="true" endPc="268440729" name="dc" stackId="1" startPc="268440548"/>
+        <entry arg="true" endPc="268440729" name="x" stackId="2" startPc="268440548"/>
+        <entry arg="true" endPc="268440729" name="itemNum" stackId="3" startPc="268440548"/>
+        <entry arg="true" endPc="268440729" name="bits" stackId="4" startPc="268440548"/>
+        <entry arg="true" endPc="268440729" name="val" stackId="5" startPc="268440548"/>
+        <entry endPc="268440728" name="y" stackId="6" startPc="268440560"/>
+        <entry endPc="268440728" name="i" stackId="7" startPc="268440582"/>
+        <entry endPc="268440715" name="phase" stackId="8" startPc="268440582"/>
+        <entry arg="true" endPc="268441244" name="dc" stackId="1" startPc="268440730"/>
+        <entry endPc="268441243" name="date" stackId="2" startPc="268440742"/>
+        <entry arg="true" endPc="268441385" name="dc" stackId="1" startPc="268441245"/>
+        <entry endPc="268441385" name="rez_cmp_local_text_2336423723" stackId="2" startPc="268441257"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="Distance"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="Calories"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="Temp"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="Rain"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="127" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Weather" offset="246" parentId="globals" symbolId="Weather" type="module"/>
+        <dataEntry label="globals/PacManApp" offset="309" parentId="globals" symbolId="PacManApp" type="class"/>
+        <dataEntry label="globals/Rez" offset="380" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/StepsProgress" offset="459" parentId="globals" symbolId="StepsProgress" type="module"/>
+        <dataEntry label="globals/Calories" offset="514" parentId="globals" symbolId="Calories" type="module"/>
+        <dataEntry label="globals/Distance" offset="569" parentId="globals" symbolId="Distance" type="module"/>
+        <dataEntry label="globals/BinaryClock" offset="624" parentId="globals" symbolId="BinaryClock" type="module"/>
+        <dataEntry label="globals/CircularProgress" offset="719" parentId="globals" symbolId="CircularProgress" type="class"/>
+        <dataEntry label="globals/PacManView" offset="814" parentId="globals" symbolId="PacManView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="933" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="1004" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="1043" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="1074" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1105" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="1144" parentId="Rez" symbolId="JsonData" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Weather">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435482" name="getApp" startPc="268435457">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435501" name="&lt;init&gt;" parent="PacManApp" startPc="268435483">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="PacManApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435544" name="getInitialView" parent="PacManApp" startPc="268435502">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435565" name="initialize" parent="PacManApp" startPc="268435545">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="PacManApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435589" name="&lt;init&gt;" parent="Rez" startPc="268435566">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="StepsProgress">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Calories">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Distance">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435997" name="&lt;init&gt;" parent="BinaryClock" startPc="268435590">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436012" name="&lt;init&gt;" parent="CircularProgress" startPc="268435998">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436452" name="drawInternal" parent="CircularProgress" startPc="268436013">
+            <param id="dc"/>
+            <param id="progress"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436794" name="initialize" parent="CircularProgress" startPc="268436453">
+            <param id="color"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436837" name="draw" parent="CircularProgress" startPc="268436795">
+            <param id="dc"/>
+            <param id="progress"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436856" name="&lt;init&gt;" parent="PacManView" startPc="268436838">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onExitSleep" parent="PacManView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436883" name="onPartialUpdate" parent="PacManView" startPc="268436857">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="PacManView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436993" name="onLayout" parent="PacManView" startPc="268436884">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onEnterSleep" parent="PacManView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437035" name="initialize" parent="PacManView" startPc="268436994">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="PacManView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437272" name="onUpdate" parent="PacManView" startPc="268437036">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437291" name="timerCallback" parent="PacManView" startPc="268437273">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437396" name="loadRes" parent="Weather" startPc="268437292">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437703" name="draw" parent="Weather" startPc="268437397">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438395" name="drawEmptyGhost" parent="StepsProgress" startPc="268437704">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="s"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438919" name="draw" parent="StepsProgress" startPc="268438396">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439525" name="drawGhost" parent="StepsProgress" startPc="268438920">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="s"/>
+            <param id="col"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439583" name="loadRes" parent="Calories" startPc="268439526">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439738" name="draw" parent="Calories" startPc="268439584">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439796" name="loadRes" parent="Distance" startPc="268439739">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439979" name="draw" parent="Distance" startPc="268439797">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440547" name="drawPacman" parent="BinaryClock" startPc="268439980">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="radius"/>
+            <param id="frame"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440729" name="drawDigit" parent="BinaryClock" startPc="268440548">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="itemNum"/>
+            <param id="bits"/>
+            <param id="val"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441244" name="draw" parent="BinaryClock" startPc="268440730">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441385" name="WatchFace" parent="Layouts" startPc="268441245">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
